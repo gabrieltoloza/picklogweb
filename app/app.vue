@@ -33,6 +33,8 @@ html, body, #app {
   font-family: 'Montserrat', sans-serif !important;
 }
 
+
+
 .page-enter-active,
 .page-leave-active {
   transition: all 0.6s ease; /* Incrementa a 0.6s y añade ease */
