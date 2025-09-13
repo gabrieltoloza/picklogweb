@@ -33,7 +33,7 @@
                 <div class="order-2 md:order-1 my-10 flex flex-col gap-8">
                     <div class="flex items-center gap-3 mb-5">
                         <span class="h-px w-24 bg-[#F9BD6B]"></span>
-                        <span class="ml-4 uppercase text-xs tracking-[0.25em] text-white">Algunos</span>
+                        <span class="ml-4 uppercase text-md font-medium tracking-[0.15em] text-white">Algunos</span>
                     </div>
 
                     <h2 class="text-4xl md:text-5xl font-bold leading-tight mb-8">

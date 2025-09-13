@@ -7,7 +7,7 @@
                         <span class="text-white">No hay dos empresas <span class="text-[#F9BD6B]">iguales</span></span>
                     </h1>
                 </div>
-                <div class="py-6 text-white flex gap-0 h-50 w-96">
+                <div class="pt-24  text-white flex gap-0 h-50 w-full">
                     <span>
                         <OkLogo />
                     </span>
