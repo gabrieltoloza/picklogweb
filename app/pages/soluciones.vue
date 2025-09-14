@@ -8,8 +8,10 @@
 </template>
 
 <script setup lang="ts">
+
 import DropdownSolutions from '~/components/Soluciones/DropdownSolutions.vue';
 import MainSolutions from '~/components/Soluciones/MainSolutions.vue';
+
 </script>
 
 <style scoped>
