@@ -1,9 +1,10 @@
 <template>
-    <div class="min-h-screen text-white py-10 bg-transparent">
+    <div class="min-h-screen text-black py-10 bg-transparent">
         <div class="container mx-auto">
-            <div class="w-full mx-auto flex flex-col bg-gray-300 rounded-lg px-32">
-                <span class="self-end h-auto">
-                    <svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="w-full mx-auto flex flex-col bg-white rounded-lg px-32 relative">
+                <span class="self-end h-auto float-right absolute right-24">
+                    
+                    <svg class="cursor-pointer" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="64.0001" cy="64" rx="32" ry="32" transform="rotate(-180 64.0001 64)"
                             fill="#F9BD6B" />
                         <path
@@ -16,68 +17,69 @@
 
                 </span>
 
-                <h1 class="text-5xl h-[70px] font-semibold my-14 flex flex-col gap-7 text-start tracking-wide text-[#1B2329]">
+                <h1 class="text-5xl h-[70px] font-semibold my-14 py-20 flex flex-col gap-7 text-start text-[#1B2329]">
                     <span>Formulario de Postulación</span>
                     <span>para Transportistas</span>
                 </h1>
 
+                
                 <form @submit.prevent="enviarFormulario" class="py-20">
                     <div>
                         
-                        <div class="flex flex-col gap-4">
+                        <div class="flex flex-col gap-7 font-semibold text-lg">
                             <div>
                                 <label for="nombre" class="block mb-2">Nombre*</label>
                                 <input id="nombre" v-model="formulario.nombre" type="text"
-                                    class="w-full p-3 bg-gray-700" placeholder="Completá con tu nombre" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Completá con tu nombre" required>
                             </div>
                             <div>
                                 <label for="apellido" class="block mb-2">Apellido*</label>
                                 <input id="apellido" v-model="formulario.apellido" type="tel"
-                                    class="w-full p-3 bg-gray-700" placeholder="Completá con tu apellido" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Completá con tu apellido" required>
                             </div>
                             <div>
                                 <label for="barrio" class="block mb-2">Barrio/Comuna/Colonia</label>
                                 <input id="barrio" v-model="formulario.barrio" type="text"
-                                    class="w-full p-3 bg-gray-700" placeholder="Ingrese su barrio o comuna" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Ingrese su barrio o comuna" required>
                             </div>
                             <div>
                                 <label for="pais" class="block mb-2">Pais*</label>
-                                <input id="pais" v-model="formulario.pais" type="text" class="w-full p-3 bg-gray-700"
+                                <input id="pais" v-model="formulario.pais" type="text" class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Ingrese el pais actual" required>
                             </div>
                             <div>
                                 <label for="correo" class="block mb-2">Correo*</label>
                                 <input id="correo" v-model="formulario.correo" type="email"
-                                    class="w-full p-3 bg-gray-700" placeholder="Completá con tu correo" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Completá con tu correo" required>
                             </div>
                             <div>
                                 <label for="dni" class="block mb-2">Documento Nacional de Identidad/Cédula de
                                     Identidad*</label>
-                                <input id="dni" v-model="formulario.dni" type="text" class="w-full p-3 bg-gray-700"
+                                <input id="dni" v-model="formulario.dni" type="text" class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Completá con tu numero de documento (DNI)" required>
                             </div>
                             <div>
                                 <label for="phone" class="block mb-2">Numero de Telefono*</label>
-                                <input id="phone" v-model="formulario.phone" type="text" class="w-full p-3 bg-gray-700"
+                                <input id="phone" v-model="formulario.phone" type="text" class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Completá con tu numero de teléfono" required>
                             </div>
                             <div>
                                 <label for="marca" class="block mb-2">Marca de vehículo</label>
-                                <input id="marca" v-model="formulario.marca" type="text" class="w-full p-3 bg-gray-700"
+                                <input id="marca" v-model="formulario.marca" type="text" class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Ingrese la marca de su vehículo" required>
                             </div>
                             <div>
                                 <label for="patente" class="block mb-2">Patente | Placa*</label>
                                 <input id="patente" v-model="formulario.patente" type="text"
-                                    class="w-full p-3 bg-gray-700" placeholder="Ingrese el número de identificación de su vehículo" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Ingrese el número de identificación de su vehículo" required>
                             </div>
                             <div>
                                 <label for="registro" class="block mb-2 w-[56%]">
                                     ¿Estás registrado en el organismo regulatorio de tu país para poder facturar con tu nombre?*
                                 </label>
                                 <div class="flex gap-5 m-5 ml-7">
-                                    <button>SI</button>
-                                    <button>NO</button>
+                                    <button class="bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer">SI</button>
+                                    <button class="bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer">NO</button>
                                 </div>
                             </div>
                         </div>
@@ -86,10 +88,11 @@
 
 
                     <!-- Botón de envío -->
-                    <div class="flex justify-center pt-6">
+                    <div class="flex justify-end pt-10">
                         <button type="submit"
-                            class="bg-[#F9BD6B] text-[#1B2329] px-10 py-4 rounded-full text-lg font-medium hover:bg-[#F9BD6B]/80 transition-colors">
-                            Enviar solicitud
+                            class="flex gap-5 cursor-pointer items-center bg-[#F9BD6B] text-[#1B2329] px-10 py-4 rounded-full font-medium text-lg hover:bg-[#F9BD6B]/80 transition-colors">
+                            Enviar formulario
+                            <RightRowSlogan />
                         </button>
                     </div>
                     
@@ -101,17 +104,18 @@
 
 
 <script setup lang="ts">
+import RightRowSlogan from '../svg/RightRowSlogan.vue';
+
 const formulario = reactive({
     nombre: '',
-    telefono: '',
-    email: '',
-    ciudad: '',
-    tipoVehiculo: '',
+    apellido: '',
+    barrio: '',
+    pais: '',
+    correo: '',
+    dni: '',
+    phone: '',
     marca: '',
-    modelo: '',
-    anio: '',
-    experiencia: '',
-    mensaje: ''
+    patente: ''
 });
 
 const enviarFormulario = async () => {

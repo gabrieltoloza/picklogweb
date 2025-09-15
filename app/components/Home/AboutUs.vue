@@ -18,7 +18,7 @@
 
                 <div>
                     <button
-                        class="bg-[#F9BD6B] border border-[#F9BD6B] rounded-full p-3 mt-3 px-9 w-60 h-16 text-[#efefef] font-medium hover:bg-[#efefef] hover:text-[#1B2329] transition-all duration-300">
+                        class="bg-[#F9BD6B] border border-[#F9BD6B] rounded-full p-3 mt-3 px-9 w-60 h-16 text-[#efefef] font-medium cursor-pointer hover:bg-[#efefef] hover:text-[#1B2329] transition-all duration-300">
                         CONOCENOS MÁS
                     </button>
                 </div>

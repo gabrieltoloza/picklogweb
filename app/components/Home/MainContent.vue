@@ -16,19 +16,29 @@
                 </div>
 
                 <div>
+
                     <span class="flex flex-row justify-center items-center relative z-20">
-                        <button
-                            class="text-sm font-medium rounded-full w-44 h-12 border border-[#F9BD6B] bg-[#F9BD6B] text-gray-700 z-10">
-                            Seguí tu envío
-                        </button>
+                        <NuxtLink to="https://www.picklog.com.ar/tracking">
+                            <button
+                                class="text-sm font-medium rounded-full w-44 h-12 border border-[#F9BD6B] bg-[#F9BD6B] text-gray-700 z-10 cursor-pointer">
+                                Seguí tu envío
+                            </button>
+                        </NuxtLink>
 
-                        <div class="absolute left-[270px] top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-                            <RightRowComplement />
-                        </div>
+                        <NuxtLink to="https://www.picklog.com.ar/tracking">
+                            <div
+                                class="absolute left-[270px] top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20 cursor-pointer">
+                                <RightRowComplement />
+                            </div>
+                        </NuxtLink>
 
-                        <div class="z-10 ml-4">
-                            <RightRow />
-                        </div>
+
+                        <NuxtLink to="https://www.picklog.com.ar/tracking">
+                            <div class="z-10 ml-4">
+                                <RightRow />
+                            </div>
+                        </NuxtLink>
+
                     </span>
                 </div>
 
@@ -57,18 +67,20 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
 .transition-container::after {
     content: "";
     position: absolute;
-    bottom: -1px; /* Se extiende 1px fuera del componente */
+    bottom: -1px;
+    /* Se extiende 1px fuera del componente */
     left: 0;
     width: 100%;
-    height: 200px; /* Aumentar altura */
-    background: linear-gradient(
-        to bottom, 
-        transparent, 
-        rgba(0,0,0,0.3) 30%, 
-        rgba(0,0,0,0.5) 60%, 
-        rgba(0,0,0,0.9) 90%,
-        rgba(0,0,0,1) /* Negro completo al final */
-    );
+    height: 200px;
+    /* Aumentar altura */
+    background: linear-gradient(to bottom,
+            transparent,
+            rgba(0, 0, 0, 0.3) 30%,
+            rgba(0, 0, 0, 0.5) 60%,
+            rgba(0, 0, 0, 0.9) 90%,
+            rgba(0, 0, 0, 1)
+            /* Negro completo al final */
+        );
     pointer-events: none;
     z-index: 10;
 }

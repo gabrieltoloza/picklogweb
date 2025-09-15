@@ -10,7 +10,7 @@
                         Adaptam<span class="text-black m-0 p-0">os la logístic</span>a a tu operación, <span class="text-[#F9BD6B]">no al revés</span>
                     </h1>
                     <button
-                        class="border border-[#F9BD6B] rounded-full p-3 mt-3 px-9 w-52 h-16 text-gray-700 font-medium hover:bg-[#F9BD6B] hover:text-[#1B2329] transition-all duration-300">
+                        class="border border-[#F9BD6B] rounded-full p-3 mt-3 px-9 w-52 h-16 text-gray-700 font-medium cursor-pointer hover:bg-[#F9BD6B] hover:text-[#1B2329] transition-all duration-300">
                         VER MÁS
                     </button>
                 </div>

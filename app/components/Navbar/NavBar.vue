@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar fixed top-0 z-50 bg-transparent p-5 px-16 h-32">
+    <div :class="['navbar fixed top-0 z-50 p-5 px-16 h-32 transition-colors navbar-custom duration-300', scrolled ? 'bg-[#1B2329] rounded-b-xl' : 'bg-transparent']">
 
 
         <!-- Logo a la izquierda -->
@@ -15,7 +15,7 @@
         <div class="navbar-center hidden lg:flex font- text-gray-300/70">
             <ul class="menu menu-horizontal px-1">
                 <li v-for="item in items" :key="item.label" class="group relative">
-                    
+
                     <!-- Punto anaranjado a la izquierda -->
                     <!-- Punto anaranjado a la izquierda -->
                     <div
@@ -37,10 +37,13 @@
         <div class="navbar-end mr-8 h-full">
             <div class="flex gap-10">
 
-                <button
-                    class="border border-[#F9BD6B] rounded-3xl p-3 px-9 text-white font-medium hover:bg-[#F9BD6B] hover:text-[#1B2329] transition-all duration-300">
-                    TRACKING
-                </button>
+                <NuxtLink to="https://www.picklog.com.ar/tracking">
+                    <button
+                        class="border border-[#F9BD6B] rounded-3xl p-3 px-9 text-white font-medium cursor-pointer hover:bg-[#F9BD6B] hover:text-[#1B2329] transition-all duration-300">
+                        TRACKING
+                    </button>
+                </NuxtLink>
+
 
                 <PicklogOrangeLogo />
 
@@ -56,9 +59,26 @@
 
 <script setup lang="ts">
 
+import { ref, onMounted, onUnmounted } from 'vue'
+
 import PickLogLogo from '~/components/svg/PickLogLogo.vue'
 import PicklogOrangeLogo from '~/components/svg/PickLogLogoOrange.vue'
 import PointNavigation from '~/components/svg/PointNavigation.vue'
+
+
+const scrolled = ref(false)
+
+const handleScroll = () => {
+    scrolled.value = window.scrollY > 30
+}
+
+onMounted(() => {
+    window.addEventListener('scroll', handleScroll)
+})
+
+onUnmounted(() => {
+    window.removeEventListener('scroll', handleScroll)
+})
 
 
 const items = [
@@ -101,4 +121,6 @@ const handleContactAction = () => {
 
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

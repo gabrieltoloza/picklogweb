@@ -109,7 +109,7 @@ const props = defineProps<{
     logos?: { src: string; alt: string }[]
 }>()
 
-const ctaHref = props.ctaHref ?? '/trabaja-con-nosotros'
+const ctaHref = props.ctaHref ?? '/transportistas-formulario'
 const logos = props.logos ?? [
     // Ejemplo por defecto (cambiá las rutas por las tuyas)
     { src: '/marcaspicklog/fenicio.png', alt: 'Fenicio' },
