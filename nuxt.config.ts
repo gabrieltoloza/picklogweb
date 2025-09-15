@@ -12,6 +12,7 @@ export default defineNuxtConfig({
             name: 'page',
             mode: 'out-in',
             appear: true
-        }
+        },
+        baseURL: '/picklogweb/'
     }
 });
