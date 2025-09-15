@@ -11,6 +11,8 @@
         <main class="main-content pt-32" :class="{ 'bg-[#1B2329]': isNosotrosPage }">
             <slot />
         </main>
+        <FooterPage />
+        
 
     </div>
 </template>
@@ -21,6 +23,7 @@ import { useRoute } from 'vue-router';
 import { computed } from 'vue';
 import NavBar from '~/components/Navbar/NavBar.vue';
 import BgBackGroundPickLog from '~/components/Home/BgBackGroundPickLog.vue';
+import FooterPage from '~/components/Home/FooterPage.vue';
 
 
 const route = useRoute();

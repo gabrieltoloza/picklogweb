@@ -1,6 +1,6 @@
 <template>
     <section class="pt-20 bg-transparent text-white min-h-[600px] font-montserrat">
-        <div class="container px-4 ml-30 flex flex-row">
+        <div class="container px-4 ml-5 flex flex-row">
 
             <!-- Primer div -->
             <div class="max-w-4xl mx-auto text-center w-1/2 justify-start flex flex-col items-center gap-10">

@@ -20,15 +20,17 @@ import TransportistasMain from '~/components/Transportistas/TransportistasMain.v
 
 <style scoped>
 
+
 .father-solutions {
     background-image: url(/Transportistas-bg.png);
     background-size: cover;
-    background-position: top -200px left; /* Cambiado de 'top left' a 'top right' */
+    background-position: top left; /* Cambiado de 'top left' a 'top right' */
     background-repeat: no-repeat;
     min-height: 100vh;
     width: 100%;
     position: relative;
     z-index: 2;
+    padding-bottom: 5rem;
 }
 
 .content-container {
@@ -37,5 +39,6 @@ import TransportistasMain from '~/components/Transportistas/TransportistasMain.v
     width: 100%;
     height: 100%;
 }
+
 
 </style>

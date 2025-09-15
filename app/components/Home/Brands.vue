@@ -1,6 +1,6 @@
 <!-- components/ClientsHero.vue -->
 <template>
-    <section class="bg-[#1B2329] text-white min-h-screen bg-custom">
+    <section class="bg-[#1B2329] text-white min-h-[850px] bg-custom">
         <!-- Barra superior: Trabajá con nosotros -->
         <div class="border-y border-white/10">
             <div class="flex items-center justify-around gap-4 py-4 text-sm text-gray-300 hover:text-white">

@@ -1,7 +1,7 @@
 <template>
     <div class="min-h-screen text-black py-10 bg-transparent">
         <div class="container mx-auto">
-            <div class="w-full mx-auto flex flex-col bg-white rounded-lg px-32 relative">
+            <div class="w-[80%] mx-auto flex flex-col bg-white rounded-lg px-32 relative">
                 <span class="self-end h-auto float-right absolute right-24">
                     
                     <svg class="cursor-pointer" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">

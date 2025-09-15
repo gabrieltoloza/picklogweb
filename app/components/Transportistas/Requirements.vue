@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full min-h-[750px] bg-transparent text-white flex flex-col justify-start items-center pb-1 gap-20">
+    <div class="w-full bg-transparent text-white flex flex-col justify-start items-center gap-20 pb-10 sm:pb-20 md:pb-32">
 
         <div class="pr-96">
             <span class="text-left block text-xl font-semibold pr-[580px]">REQUISITOS:</span>
@@ -45,4 +45,6 @@
 
 </script>
 
-<style scoped></style>
+<style scoped>
+
+</style>

@@ -7,7 +7,6 @@
         <BussinesFlow />
         <Brands />
         <AboutUs />
-        <FooterPage />
   </div>
 
 </template>
