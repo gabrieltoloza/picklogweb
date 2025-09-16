@@ -21,15 +21,15 @@
             <!-- Segundo div -->
             <div class="flex flex-col gap-5 w-1/2 items-center justify-center pt-32">
                 <div class="estadistica-box flex gap-10 p-4 px-10 border border-white rounded-2xl bg-[#1B2329]">
-                    <h3 class="text-3xl text-[#F9BD6B] font-semibold">+2.000</h3>
+                    <h3 class="text-3xl text-[#F9BD6B] font-semibold">+<span id="clientes">0</span></h3>
                     <p>Clientes</p>
                 </div>
                 <div class="estadistica-box flex gap-10 p-4  border border-white rounded-2xl bg-[#1B2329]">
-                    <h3 class="text-3xl text-[#F9BD6B] font-semibold">+20</h3>
+                    <h3 class="text-3xl text-[#F9BD6B] font-semibold">+<span id="camionetas">20</span></h3>
                     <p>Camionetas</p>
                 </div>
                 <div class="estadistica-box flex gap-10 p-4 px-12 border border-white rounded-2xl bg-[#1B2329]">
-                    <h3 class="text-3xl text-[#F9BD6B] font-semibold">+70</h3>
+                    <h3 class="text-3xl text-[#F9BD6B] font-semibold">+<span id="empleados">70</span></h3>
                     <p>Empleados</p>
                 </div>
             </div>
@@ -42,10 +42,19 @@
 
 <script setup lang="ts">
 
+import { CountUp } from 'countup.js';
 import Dactilar from '../svg/Dactilar.vue';
 
 
+onMounted(() => {
+    const countUpClientes = new CountUp('clientes', 2000, { duration: 2 } )
+    const countUpCamionetas = new CountUp('camionetas', 20, { duration: 5 })
+    const countUpEmpleados = new CountUp('empleados', 70, { duration: 4 })
 
+    countUpClientes.start();
+    countUpCamionetas.start();
+    countUpEmpleados.start();
+})
 
 
 
