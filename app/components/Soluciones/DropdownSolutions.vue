@@ -1,5 +1,7 @@
 <template>
-    <div class="w-full bg-transparent text-white flex flex-wrap justify-center items-start gap-6 sm:gap-8 pb-40">
+    <div class="w-full bg-transparent text-white flex flex-wrap justify-center items-start gap-6 sm:gap-8 pb-40
+    
+    ">
 
         <!-- Botón 1 -->
         <div class="dropdown dropdown-hover relative">
@@ -181,5 +183,26 @@
   }
 }
 
+/* Ajuste para pantallas LG (laptops, 1024px a 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .custom-btn {
+    width: 180px !important;
+    height: 44px !important;
+    padding: 12px 16px !important;
+    border-radius: 32px !important;
+  }
+  .btn-text {
+    font-size: 0.95rem !important;
+    line-height: 1.25rem !important;
+  }
+  .dropdown-content {
+    width: 180px !important;
+    padding: 10px !important;
+  }
+  .dropdown-text {
+    font-size: 0.95rem !important;
+    padding: 16px !important;
+  }
+}
 
 </style>
