@@ -3,26 +3,24 @@
         class="w-full bg-transparent text-white flex flex-col sm:flex-row sm:flex-wrap justify-center items-center sm:items-start gap-4 sm:gap-6 md:gap-8 pb-20 sm:pb-32 lg:pb-40">
         <!-- Botón genérico -->
         <div v-for="(item, index) in items" :key="index" class="dropdown dropdown-hover relative">
-            <!-- Botón -->
-            <div tabindex="0" role="button" class="w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] xl:w-[280px] 2xl:w-[320px]
-               h-[44px] sm:h-[48px] md:h-[52px] lg:h-[56px] xl:h-[60px] 2xl:h-[64px]
-               rounded-[36px] py-3 px-4 md:py-5 md:px-6 flex items-center justify-between 
-               bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
-                <span class="font-medium text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl">
+            <div tabindex="0" role="button" class="w-[160px] sm:w-[200px] md:w-[220px] 2xl:w-[320px] 
+           h-[44px] sm:h-[48px] md:h-[56px] xl:h-[64px] 2xl:h-[72px] 
+           rounded-[36px] py-3 px-4 xl:py-5 xl:px-6 flex items-center justify-between 
+           bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
+                <span class="font-medium text-xs sm:text-sm md:text-base xl:text-lg 2xl:text-xl">
                     {{ item.title }}
                 </span>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 8H16" stroke="#121A1F" stroke-width="2" />
                     <path d="M8 16L8 0" stroke="#121A1F" stroke-width="2" />
                 </svg>
             </div>
 
-            <!-- Dropdown -->
             <ul tabindex="0" class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
-               w-[160px] sm:w-[200px] md:w-[220px] lg:w-[260px] xl:w-[280px] 2xl:w-[320px]
-               p-2 md:p-3 lg:p-4 xl:p-5 2xl:p-6 mt-3 shadow-lg border border-gray-400">
-                <p class="text-white text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-2xl
-                 p-3 sm:p-4 md:p-5 lg:p-6">
+           w-[160px] sm:w-[200px] md:w-[220px] 2xl:w-[320px] 
+           p-2 sm:p-3 md:p-5 xl:p-6 2xl:p-7 mt-3 shadow-lg border border-gray-400">
+                <p
+                    class="text-white text-xs sm:text-sm md:text-base xl:text-lg 2xl:text-xl p-3 sm:p-4 md:p-5 xl:p-6 2xl:p-7">
                     {{ item.desc }}
                 </p>
             </ul>
@@ -56,7 +54,6 @@ const items = [
 </script>
 
 <style scoped>
-
 .dropdown-button {
     position: relative;
     z-index: 1;
@@ -86,9 +83,7 @@ const items = [
     z-index: -1;
     pointer-events: none;
 }
-
 </style>
-
 
 
 
