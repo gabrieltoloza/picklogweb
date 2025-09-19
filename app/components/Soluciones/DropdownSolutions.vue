@@ -1,39 +1,41 @@
 <template>
     <div class="w-full bg-transparent text-white flex flex-wrap justify-center items-start gap-6 sm:gap-8 pb-40">
 
-
         <!-- Botón 1 -->
         <div class="dropdown dropdown-hover relative">
-            <div tabindex="0" role="button" class="w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
-               bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
-                <span class="font-medium text-sm sm:text-base">TMS</span>
+            <div tabindex="0" role="button"
+                class="custom-btn w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
+                bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
+                <span class="btn-text font-medium text-sm sm:text-base">TMS</span>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 8H16" stroke="#121A1F" stroke-width="2" />
                     <path d="M8 16L8 0" stroke="#121A1F" stroke-width="2" />
                 </svg>
             </div>
-            <ul tabindex="0" class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
-               w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
-                <p class="text-white text-sm sm:text-base p-4 sm:p-5">
+            <ul tabindex="0"
+                class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
+                w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
+                <p class="dropdown-text text-white text-sm sm:text-base p-4 sm:p-5">
                     Dashboard para monitorear el estado de los pedidos en tiempo real.
                 </p>
             </ul>
         </div>
 
-
         <!-- Botón 2 -->
         <div class="dropdown dropdown-hover">
-            <div tabindex="0" role="button" class="w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
-               bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
-                <span class="font-medium text-sm sm:text-base">WMS</span>
+            <div tabindex="0" role="button"
+                class="custom-btn w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
+                bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
+                <span class="btn-text font-medium text-sm sm:text-base">WMS</span>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 8H16" stroke="#121A1F" stroke-width="2" />
                     <path d="M8 16L8 0" stroke="#121A1F" stroke-width="2" />
                 </svg>
             </div>
-            <ul tabindex="0" class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
-               w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
-                <p class="text-white text-sm sm:text-base p-4 sm:p-5">
+            <ul tabindex="0"
+                class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
+                w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
+                <p class="dropdown-text text-white text-sm sm:text-base p-4 sm:p-5">
                     Trazabilidad en línea las 24 horas, los 365 días del año.
                     Seguimiento de inventario en tiempo real para reponer a tiempo y evitar quiebres de stock.
                 </p>
@@ -42,17 +44,19 @@
 
         <!-- Botón 3 -->
         <div class="dropdown dropdown-hover">
-            <div tabindex="0" role="button" class="w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
-               bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
-                <span class="font-medium text-sm sm:text-base">E-COMMERCE</span>
+            <div tabindex="0" role="button"
+                class="custom-btn w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
+                bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
+                <span class="btn-text font-medium text-sm sm:text-base">E-COMMERCE</span>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 8H16" stroke="#121A1F" stroke-width="2" />
                     <path d="M8 16L8 0" stroke="#121A1F" stroke-width="2" />
                 </svg>
             </div>
-            <ul tabindex="0" class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
-               w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
-                <p class="text-white text-sm sm:text-base p-4 sm:p-5">
+            <ul tabindex="0"
+                class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
+                w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
+                <p class="dropdown-text text-white text-sm sm:text-base p-4 sm:p-5">
                     Integración a medida con tu e-commerce y/o marketplace para gestionar tus ventas.
                 </p>
             </ul>
@@ -60,17 +64,19 @@
 
         <!-- Botón 4 -->
         <div class="dropdown dropdown-hover relative group">
-            <div tabindex="0" role="button" class="w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
-               bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
-                <span class="w-[80%] font-medium text-sm ">TOMADOR DE PEDIDOS WEB</span>
+            <div tabindex="0" role="button"
+                class="custom-btn w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
+                bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
+                <span class="btn-text w-[80%] font-medium text-sm">TOMADOR DE PEDIDOS WEB</span>
                 <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 8H16" stroke="#121A1F" stroke-width="2" />
                     <path d="M8 16L8 0" stroke="#121A1F" stroke-width="2" />
                 </svg>
             </div>
-            <ul tabindex="0" class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
-               w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
-                <p class="text-white text-sm sm:text-base p-4 sm:p-5">
+            <ul tabindex="0"
+                class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
+                w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
+                <p class="dropdown-text text-white text-sm sm:text-base p-4 sm:p-5">
                     Ingresa pedidos online.
                     Desde cualquier lugar y en cualquier momento.
                 </p>
@@ -79,17 +85,19 @@
 
         <!-- Botón 5 -->
         <div class="dropdown dropdown-hover">
-            <div tabindex="0" role="button" class="w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
-               bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
-                <span class="font-medium text-sm ">EQUIPO DE IT DISPONIBLE</span>
+            <div tabindex="0" role="button"
+                class="custom-btn w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
+                bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
+                <span class="btn-text font-medium text-sm">EQUIPO DE IT DISPONIBLE</span>
                 <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
                     stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
                 </svg>
             </div>
-            <ul tabindex="0" class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
-               w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
-                <p class="text-white text-sm sm:text-base p-4 sm:p-5">
+            <ul tabindex="0"
+                class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
+                w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
+                <p class="dropdown-text text-white text-sm sm:text-base p-4 sm:p-5">
                     Soporte técnico especializado para acompañar tu operación <b>cuando lo necesites</b>.
                 </p>
             </ul>
@@ -132,5 +140,30 @@
     mask-composite: exclude;
     z-index: -1;
     pointer-events: none;
+}
+
+/* ✅ Ajustes especiales para pantallas grandes (≥1450px) */
+@media (min-width: 1450px) {
+    .custom-btn {
+        width: 300px !important;
+        height: 64px !important;
+        padding: 20px 24px !important;
+        border-radius: 36px !important;
+    }
+
+    .btn-text {
+        font-size: 1.25rem !important; /* ~20px */
+        line-height: 1.5rem !important;
+    }
+
+    .dropdown-content {
+        width: 300px !important;
+        padding: 16px !important;
+    }
+
+    .dropdown-text {
+        font-size: 1.125rem !important; /* ~18px */
+        padding: 24px !important;
+    }
 }
 </style>
