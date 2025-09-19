@@ -143,7 +143,7 @@
 }
 
 /* ✅ Ajustes especiales para pantallas grandes (≥1450px) */
-@media (min-width: 1450px) {
+@media (min-width: 1550px) {
     .custom-btn {
         width: 300px !important;
         height: 64px !important;
