@@ -166,4 +166,20 @@
         padding: 24px !important;
     }
 }
+
+
+/* ✅ Espacio mínimo para dropdowns */
+@media (max-width: 1549px) {
+  .pb-40 {
+    padding-bottom: 11.25rem !important; /* 180px */
+  }
+}
+
+@media (min-width: 1550px) {
+  .pb-40 {
+    padding-bottom: 11.25rem !important; /* 180px */
+  }
+}
+
+
 </style>
