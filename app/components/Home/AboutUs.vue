@@ -1,9 +1,10 @@
 <template>
 
     <div class="hero min-h-[1000px] bg-custom" style="background-image: url('/Nosotros.jpg');">
-        
+
         <div class="hero-content text-neutral-content text-center w-full md:w-2/3">
-            <div class="max-w-md min-h-screen w-full flex flex-col justify-end pb-10 relative">
+            <div class="max-w-md min-h-screen w-full flex flex-col justify-end pb-10 relative
+            pt-20 sm:pt-28 md:pt-32 lg:pt-36">
 
                 <div
                     class="mb-6 px-6 md:px-10 mt-auto pt-36 flex flex-col gap-2 w-full md:w-[1033px] md:h-[408px] md:absolute md:top-[391px] md:left-1/2 md:-translate-x-1/2 backdrop-filter backdrop-blur-lg  bg-opacity-20 rounded-2xl border border-gray-700 font-montserrat">
@@ -37,10 +38,8 @@
 
 
 <style scoped>
-
 .bg-custom {
     position: relative;
     z-index: 5;
 }
-
 </style>
