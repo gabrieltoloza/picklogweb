@@ -1,13 +1,15 @@
 <template>
   <div class="background-wrapper">
-    <img src="/picklog_main_bg.png" alt="Background" class="background-image" />
+    <!-- Imagen para mobile -->
+    <img src="/mobile_bg_picklog.jpeg" alt="Background mobile" class="background-image block sm:hidden" />
+    <!-- Imagen para sm en adelante -->
+    <img src="/picklog_main_bg.png" alt="Background desktop" class="background-image hidden sm:block" />
 
   </div>
 </template>
 
 
 <style scoped>
-
 .background-wrapper {
   position: fixed;
   top: 0;
@@ -58,5 +60,4 @@
     transparent 100%
   );
 } */
-
 </style>
