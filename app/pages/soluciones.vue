@@ -1,5 +1,5 @@
 <template>
-    <div class="father-solutions min-h-[600px] sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px]">
+    <div class="father-solutions min-h-[600px] sm:min-h-[700px] md:min-h-[1000px] lg:min-h-[900px]">
         <div class="content-container">
             <MainSolutions />
             <DropdownSolutions />
@@ -14,17 +14,22 @@ import MainSolutions from '~/components/Soluciones/MainSolutions.vue';
 
 </script>
 
+
 <style scoped>
+
+
 .father-solutions {
     background-image: url(/Soluciones-bg.png);
     background-size: cover;
     background-position: top -200px left; /* Cambiado de 'top left' a 'top right' */
     background-repeat: no-repeat;
-    min-height: 100vh;
+    min-height: 100%;
+    height: auto;
     width: 100%;
     position: relative;
     z-index: 2;
 }
+
 
 .content-container {
     position: relative;

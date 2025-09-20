@@ -1,10 +1,9 @@
 <template>
-    <div class="w-full bg-transparent text-white flex flex-wrap justify-center items-start gap-6 sm:gap-8 pb-40
-    
-    ">
+    <div class="w-full bg-transparent text-white flex flex-wrap justify-center items-start gap-6 sm:gap-8 custom_breakpoint relative overflow-visible">
+
 
         <!-- Botón 1 -->
-        <div class="dropdown dropdown-hover relative">
+        <div class="dropdown dropdown-hover">
             <div tabindex="0" role="button"
                 class="custom-btn w-[180px] sm:w-[220px] h-[48px] rounded-[36px] py-4 px-4 flex items-center justify-between 
                 bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
@@ -23,6 +22,7 @@
             </ul>
         </div>
 
+
         <!-- Botón 2 -->
         <div class="dropdown dropdown-hover">
             <div tabindex="0" role="button"
@@ -37,12 +37,13 @@
             <ul tabindex="0"
                 class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
                 w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
-                <p class="dropdown-text text-white text-sm sm:text-base p-4 sm:p-5">
+                <p class="dropdown-text text-white text-sm sm:text-base p-4 sm:p-4">
                     Trazabilidad en línea las 24 horas, los 365 días del año.
                     Seguimiento de inventario en tiempo real para reponer a tiempo y evitar quiebres de stock.
                 </p>
             </ul>
         </div>
+
 
         <!-- Botón 3 -->
         <div class="dropdown dropdown-hover">
@@ -63,6 +64,7 @@
                 </p>
             </ul>
         </div>
+
 
         <!-- Botón 4 -->
         <div class="dropdown dropdown-hover relative group">
@@ -85,6 +87,7 @@
             </ul>
         </div>
 
+        
         <!-- Botón 5 -->
         <div class="dropdown dropdown-hover">
             <div tabindex="0" role="button"
@@ -97,7 +100,7 @@
                 </svg>
             </div>
             <ul tabindex="0"
-                class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
+                class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent lg:bg-[#1B2329] rounded-[14px] z-10 
                 w-[180px] sm:w-[220px] p-2 mt-3 shadow-lg border border-gray-400">
                 <p class="dropdown-text text-white text-sm sm:text-base p-4 sm:p-5">
                     Soporte técnico especializado para acompañar tu operación <b>cuando lo necesites</b>.
@@ -105,15 +108,24 @@
             </ul>
         </div>
 
+
+        <div class="h-[300px] w-full bg-transparent"></div>
+
     </div>
+
 </template>
 
 <script setup lang="ts">
 </script>
 
 <style scoped>
+
+.dropdown {
+  position: relative; /* el padre */
+}
+
+
 .dropdown-button {
-    position: relative;
     z-index: 1;
     border: none;
 }
@@ -144,6 +156,7 @@
     pointer-events: none;
 }
 
+
 /* ✅ Ajustes especiales para pantallas grandes (≥1450px) */
 @media (min-width: 1550px) {
     .custom-btn {
@@ -170,18 +183,6 @@
 }
 
 
-/* ✅ Espacio mínimo para dropdowns */
-@media (max-width: 1549px) {
-  .pb-40 {
-    padding-bottom: 11.25rem !important; /* 180px */
-  }
-}
-
-@media (min-width: 1550px) {
-  .pb-40 {
-    padding-bottom: 11.25rem !important; /* 180px */
-  }
-}
 
 /* Ajuste para pantallas LG (laptops, 1024px a 1279px) */
 @media (min-width: 1024px) and (max-width: 1279px) {
@@ -204,5 +205,12 @@
     padding: 16px !important;
   }
 }
+
+
+.dropdown-content {
+    z-index: 50 !important;
+}
+
+
 
 </style>
