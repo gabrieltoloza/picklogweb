@@ -1,5 +1,5 @@
 <template>
-    <div class="father-solutions">
+    <div class="father-solutions min-h-[600px] sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px]">
         <div class="content-container">
             <MainSolutions />
             <DropdownSolutions />
