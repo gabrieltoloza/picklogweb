@@ -33,8 +33,8 @@
                                         </div>
                                         <div
                                             class="card-body flex flex-col flex-grow py-4 my-6 mx-4 mt-8 items-start gap-3">
-                                            <h2 class="card-title text-wrap text-lg w-24">Logística inteligente</h2>
-                                            <p class="w-full pt-2 text-balance font-medium text-gray-900">
+                                            <h2 class="card-title text-wrap text-lg w-24 pl-2 sm:pl-0">Logística inteligente</h2>
+                                            <p class="w-full pt-4 sm:pl-0 pl-2 text-balance font-medium text-gray-900">
                                                 Gestión logística optimizada con tecnología y datos en tiempo real para mejorar
                                                 eficiencia, control y toma de decisiones
                                             </p>
@@ -59,8 +59,8 @@
                                         </div>
                                         <div
                                             class="card-body flex flex-col flex-grow py-4 my-6 mx-4 mt-8 items-start gap-3">
-                                            <h2 class="card-title text-wrap text-lg w-24 pt-2">Personalización</h2>
-                                            <p class="w-full pt-7 text-balance font-medium text-gray-900">
+                                            <h2 class="card-title text-wrap text-lg w-24 pt-2 pl-2 sm:pl-0">Personalización</h2>
+                                            <p class="w-full pt-7 sm:pl-0 pl-2 text-balance font-medium text-gray-900">
                                                 Nuestro equipo está presente en cada etapa, asegurando atención directa y respuestas
                                                 rápidas.
                                             </p>
@@ -77,8 +77,8 @@
                                         </div>
                                         <div
                                             class="card-body flex flex-col flex-grow py-4 my-6 mx-4 mt-8 items-start gap-3">
-                                            <h2 class="card-title text-wrap text-lg w-28">Servicios - Fulfillment</h2>
-                                            <p class="w-full text-start pt-2 font-medium text-gray-900">
+                                            <h2 class="card-title text-wrap text-lg w-28 pl-2 sm:pl-0">Servicios - Fulfillment</h2>
+                                            <p class="w-full text-start pt-2 sm:pl-0 pl-2 font-medium text-gray-900">
                                                 Visibilidad total desde que entra tu stock hasta que se entrega al cliente. Optimizá
                                                 tiempos, reducí costos y enfocate en crecer tu negocio.
                                             </p>
