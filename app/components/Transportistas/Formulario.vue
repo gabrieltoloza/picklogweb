@@ -1,10 +1,27 @@
 <template>
     <div class="min-h-screen text-black py-10 bg-transparent">
         <div class="container mx-auto">
-            <div class="w-[80%] mx-auto flex flex-col bg-white rounded-lg px-32 relative">
-                <span class="self-end h-auto float-right absolute right-24">
-                    
-                    <svg class="cursor-pointer" width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+
+            <div
+                class="sm:hidden container pl-12 md:pl-28 lg:pl-40 px-4 md:px-8 flex flex-col gap-8 max-w-4xl items-start justify-start text-white">
+
+                <h3 class="text-md font-semibold tracking-widest">TRANSPORTISTAS</h3>
+
+                <h2 class="text-2xl w-[60%] md:text-5xl font-semibold leading-tight">
+                    ¿Tenés una camioneta y querés crecer?
+                </h2>
+
+                <p class="text-lg text-[#F9BD6B] font-semibold mb-8">
+                    Formulario para transportistas.
+                </p>
+
+            </div>
+
+            <div class="w-full sm:w-[80%] mx-auto flex flex-col bg-white rounded-[45px] sm:rounded-lg px-10 sm:px-32 relative">
+                <span class="hidden sm:inline-block self-end h-auto float-right absolute right-1 sm:right-24">
+
+                    <svg class="cursor-pointer" width="128" height="128" viewBox="0 0 128 128" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
                         <ellipse cx="64.0001" cy="64" rx="32" ry="32" transform="rotate(-180 64.0001 64)"
                             fill="#F9BD6B" />
                         <path
@@ -17,69 +34,82 @@
 
                 </span>
 
-                <h1 class="text-5xl h-[70px] font-semibold my-14 py-20 flex flex-col gap-7 text-start text-[#1B2329]">
+
+                <h1 class="hidden text-5xl h-[70px] font-semibold my-14 py-20 sm:flex sm:flex-col gap-7 text-start text-[#1B2329]">
                     <span>Formulario de Postulación</span>
                     <span>para Transportistas</span>
                 </h1>
 
-                
+
                 <form @submit.prevent="enviarFormulario" class="py-20">
                     <div>
-                        
-                        <div class="flex flex-col gap-7 font-semibold text-lg">
+
+                        <div class="flex flex-col gap-7 font-semibold sm:text-lg">
                             <div>
                                 <label for="nombre" class="block mb-2">Nombre*</label>
                                 <input id="nombre" v-model="formulario.nombre" type="text"
-                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Completá con tu nombre" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none"
+                                    placeholder="Completá con tu nombre" required>
                             </div>
                             <div>
                                 <label for="apellido" class="block mb-2">Apellido*</label>
                                 <input id="apellido" v-model="formulario.apellido" type="tel"
-                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Completá con tu apellido" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none"
+                                    placeholder="Completá con tu apellido" required>
                             </div>
                             <div>
                                 <label for="barrio" class="block mb-2">Barrio/Comuna/Colonia</label>
                                 <input id="barrio" v-model="formulario.barrio" type="text"
-                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Ingrese su barrio o comuna" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none"
+                                    placeholder="Ingrese su barrio o comuna" required>
                             </div>
                             <div>
                                 <label for="pais" class="block mb-2">Pais*</label>
-                                <input id="pais" v-model="formulario.pais" type="text" class="w-full p-3 border-l-2 focus:outline-none"
+                                <input id="pais" v-model="formulario.pais" type="text"
+                                    class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Ingrese el pais actual" required>
                             </div>
                             <div>
                                 <label for="correo" class="block mb-2">Correo*</label>
                                 <input id="correo" v-model="formulario.correo" type="email"
-                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Completá con tu correo" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none"
+                                    placeholder="Completá con tu correo" required>
                             </div>
                             <div>
                                 <label for="dni" class="block mb-2">Documento Nacional de Identidad/Cédula de
                                     Identidad*</label>
-                                <input id="dni" v-model="formulario.dni" type="text" class="w-full p-3 border-l-2 focus:outline-none"
+                                <input id="dni" v-model="formulario.dni" type="text"
+                                    class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Completá con tu numero de documento (DNI)" required>
                             </div>
                             <div>
                                 <label for="phone" class="block mb-2">Numero de Telefono*</label>
-                                <input id="phone" v-model="formulario.phone" type="text" class="w-full p-3 border-l-2 focus:outline-none"
+                                <input id="phone" v-model="formulario.phone" type="text"
+                                    class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Completá con tu numero de teléfono" required>
                             </div>
                             <div>
                                 <label for="marca" class="block mb-2">Marca de vehículo</label>
-                                <input id="marca" v-model="formulario.marca" type="text" class="w-full p-3 border-l-2 focus:outline-none"
+                                <input id="marca" v-model="formulario.marca" type="text"
+                                    class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Ingrese la marca de su vehículo" required>
                             </div>
                             <div>
                                 <label for="patente" class="block mb-2">Patente | Placa*</label>
                                 <input id="patente" v-model="formulario.patente" type="text"
-                                    class="w-full p-3 border-l-2 focus:outline-none" placeholder="Ingrese el número de identificación de su vehículo" required>
+                                    class="w-full p-3 border-l-2 focus:outline-none"
+                                    placeholder="Ingrese el número de identificación de su vehículo" required>
                             </div>
                             <div>
-                                <label for="registro" class="block mb-2 w-[56%]">
-                                    ¿Estás registrado en el organismo regulatorio de tu país para poder facturar con tu nombre?*
+                                <label for="registro" class="block mb-2 sm:w-[56%]">
+                                    ¿Estás registrado en el organismo regulatorio de tu país para poder facturar con tu
+                                    nombre?*
                                 </label>
                                 <div class="flex gap-5 m-5 ml-7">
-                                    <button class="bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer">SI</button>
-                                    <button class="bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer">NO</button>
+                                    <button
+                                        class="bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer">SI</button>
+                                    <button
+                                        class="bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer">NO</button>
                                 </div>
                             </div>
                         </div>
@@ -88,14 +118,14 @@
 
 
                     <!-- Botón de envío -->
-                    <div class="flex justify-end pt-10">
+                    <div class="flex justify-center sm:justify-end pt-10">
                         <button type="submit"
                             class="flex gap-5 cursor-pointer items-center bg-[#F9BD6B] text-[#1B2329] px-10 py-4 rounded-full font-medium text-lg hover:bg-[#F9BD6B]/80 transition-colors">
                             Enviar formulario
                             <RightRowSlogan />
                         </button>
                     </div>
-                    
+
                 </form>
             </div>
         </div>

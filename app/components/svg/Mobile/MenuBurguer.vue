@@ -17,7 +17,7 @@
         <div class="drawer-side z-50">
             <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
 
-            <div class="bg-gray-200 text-[#1B2329] min-h-full w-screen px-14 py-14 flex flex-col justify-between">
+            <div class="bg-[#F2F2F3] text-[#1B2329] min-h-full w-screen px-14 py-20 pb-25 flex flex-col justify-between">
 
                 <!-- Contenedor del botón Close -->
                 <div class="w-full flex justify-end">

@@ -1,6 +1,6 @@
 <template>
     <section class="pt-20 bg-transparent text-white min-h-[600px] font-montserrat">
-        <div class="container px-4 ml-5 flex flex-row">
+        <div class="container px-4 ml-5 flex flex-col sm:flex-row">
 
             <!-- Primer div -->
             <div class="max-w-4xl mx-auto text-center w-1/2 justify-start flex flex-col items-center gap-10">
@@ -12,14 +12,14 @@
                     <p> Somos una pyme de logística con mas de 15 años de experiencia en el
                         mercado.
                     </p>
-                    <p>
+                    <p class="pt-10 sm:pt-0 text-[#F9BD6B] font-medium sm:font-normal sm:text-white">
                         En constante crecimiento..
                     </p>
                 </div>
             </div>
 
             <!-- Segundo div -->
-            <div class="flex flex-col gap-5 w-1/2 items-center justify-center pt-32">
+            <div class="flex flex-col gap-5 sm:w-1/2 items-center justify-center pt-32">
                 <div class="estadistica-box flex gap-10 p-4 px-10 border border-white rounded-2xl bg-[#1B2329]">
                     <h3 class="text-3xl text-[#F9BD6B] font-semibold">+<span id="clientes">0</span></h3>
                     <p>Clientes</p>

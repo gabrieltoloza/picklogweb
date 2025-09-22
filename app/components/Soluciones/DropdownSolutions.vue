@@ -72,7 +72,7 @@
                 class="custom-btn w-[250px] sm:w-[220px] h-[60px] sm:h-[48px] rounded-[36px] py-4 px-8 sm:px-4 flex items-center justify-between 
                 bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] focus:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
                 <span class="btn-text font-medium text-base sm:text-base">TOMADOR DE PEDIDOS WEB</span>
-                <svg width="14" height="14" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M0 8H16" stroke="#121A1F" stroke-width="2" />
                     <path d="M8 16L8 0" stroke="#121A1F" stroke-width="2" />
                 </svg>
@@ -94,9 +94,9 @@
                 class="custom-btn w-[250px] sm:w-[220px] h-[60px] sm:h-[48px] rounded-[36px] py-4 px-8 sm:px-4 flex items-center justify-between 
                 bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] focus:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
                 <span class="btn-text font-medium text-base sm:text-base">EQUIPO DE IT DISPONIBLE</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24"
-                    stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                <svg width="18" height="18" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M0 8H16" stroke="#121A1F" stroke-width="2" />
+                    <path d="M8 16L8 0" stroke="#121A1F" stroke-width="2" />
                 </svg>
             </div>
             <ul tabindex="0"

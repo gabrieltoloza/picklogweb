@@ -12,7 +12,7 @@
                 Convertite en chofer de Pick&Log
             </p>
 
-            <p class="text-lg mb-10 max-w-2xl">
+            <p class="text-md sm:text-lg mb-10 sm:max-w-2xl w-[85%]">
                 Con el crecimiento del e-commerce, el rol de los conductores se vuelve cada vez más clave. 
                 Ofrecemos trabajo en una industria dinámica, en plena expansión y con mucho por construir.
             </p>

@@ -16,12 +16,11 @@ import MainSolutions from '~/components/Soluciones/MainSolutions.vue';
 
 
 <style scoped>
-
-
 .father-solutions {
     background-image: url(/Soluciones-bg.png);
     background-size: cover;
-    background-position: top -200px left; /* Cambiado de 'top left' a 'top right' */
+    background-position: top -200px left;
+    /* Cambiado de 'top left' a 'top right' */
     background-repeat: no-repeat;
     min-height: 100%;
     height: auto;
@@ -38,4 +37,15 @@ import MainSolutions from '~/components/Soluciones/MainSolutions.vue';
     height: 100%;
 }
 
+@media (max-width: 639px) {
+    .father-solutions {
+        background-image: url('/bg_solutions_mobile.png');
+        background-position: top left;
+        min-height: 1200px;
+    }
+
+    .no-padding-mobile {
+        padding-top: 0 !important;
+    }
+}
 </style>

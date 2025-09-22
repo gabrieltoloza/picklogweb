@@ -8,11 +8,14 @@
         <BgBackGroundPickLog v-if="!isNosotrosPage" />
 
         <!-- Layout Main del proyecto -->
-        <main class="main-content pt-32" :class="{ 'bg-[#1B2329]': isNosotrosPage }">
+        <main class="main-content pt-32" :class="{
+            'bg-[#1B2329]': isNosotrosPage,
+            'no-padding-mobile': route.path === '/soluciones'
+        }">
             <slot />
         </main>
         <FooterPage />
-        
+
 
     </div>
 </template>

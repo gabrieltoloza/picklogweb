@@ -4,3 +4,8 @@
 @plugin "daisyui";
 
 
+@media (max-width: 639px) {
+  .no-padding-mobile {
+    padding-top: 0 !important;
+  }
+}

@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-transparent min-h-[400px] flex justify-start p-16 px-48">
-        <p class="w-[44%] ml-4 text-white tracking-wide">
+    <div class="bg-transparent min-h-[400px] flex justify-start p-16 sm:px-48">
+        <p class="sm:w-[44%] ml-4 text-white tracking-wide">
             En Pick & Log creemos en el trabajo en equipo como base de todo. Sabemos que cuando cada parte funciona
             bien, el todo avanza. Por eso fomentamos la colaboración y la búsqueda constante de mejorar. Apostamos a la
             tecnología, al crecimiento de nuestros clientes y a un servicio personalizado, sin perder de vista lo más
