@@ -1,7 +1,7 @@
 <template>
     <div class="hero min-h-screen bg-transparent p-10 transition-container z-10">
-        <div class="hero-content text-center ">
-            <div class="pt-28 sm:pt-0 pb-24 sm:pb-36 max-w-md h-full flex flex-col justify-between min-h-[70vh]">
+        <div class="hero-content text-center pb-20">
+            <div class="pt-20 sm:pt-0 pb-24 sm:pb-36 max-w-md h-full flex flex-col justify-between min-h-[70vh]">
 
                 <div>
                     <h1 class="text-4xl sm:w-full sm:text-5xl font-bold">
