@@ -4,7 +4,7 @@
             <div class="pt-28 sm:pt-0 pb-24 sm:pb-36 max-w-md h-full flex flex-col justify-between min-h-[70vh]">
 
                 <div>
-                    <h1 class="text-3xl sm:text-5xl font-bold">
+                    <h1 class="text-4xl sm:w-full sm:text-5xl font-bold">
                         <span class="text-white">No hay dos empresas <span class="text-[#F9BD6B]">iguales</span></span>
                     </h1>
                 </div>
@@ -13,7 +13,7 @@
                     <span class="flex justify-center">
                         <OkLogo />
                     </span>
-                    <span class="text-balance sm:text-xl sm:w-full">Por eso conectamos inteligencia
+                    <span class="text-balance text-lg sm:text-xl sm:w-full">Por eso conectamos inteligencia
                         operativa
                         con atención personalizada.</span>
                 </div>
@@ -46,15 +46,14 @@
                 </div>
 
 
-                <div
-                    class="sm:hidden fixed bottom-24 left-1/2 -translate-x-1/2 flex justify-center items-center z-50 w-auto">
-                    <NuxtLink to="https://www.picklog.com.ar/tracking">
-                        <IconBox />
-                    </NuxtLink>
-                </div>
-
             </div>
         </div>
+    </div>
+
+    <div class="sm:hidden fixed bottom-24 left-1/2 -translate-x-1/2 flex justify-center items-center z-50 w-auto">
+        <NuxtLink to="https://www.picklog.com.ar/tracking">
+            <IconBox />
+        </NuxtLink>
     </div>
 </template>
 
@@ -94,6 +93,6 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
             /* Negro completo al final */
         );
     pointer-events: none;
-    z-index: 10;
+    z-index: 9;
 }
 </style>

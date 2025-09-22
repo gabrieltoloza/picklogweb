@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full min-h-[750px] bg-transparent text-white flex flex-col justify-center items-start pt-20">
+    <div class="w-full min-h-[750px] bg-transparent text-white flex flex-col justify-center items-start sm:pt-20">
         <div class="container pl-12 md:pl-28 lg:pl-40 px-4 md:px-8 flex flex-col gap-8 max-w-4xl items-start justify-start">
 
             <h3 class="text-xl font-semibold tracking-widest">TRANSPORTISTAS</h3>

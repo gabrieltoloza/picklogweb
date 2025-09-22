@@ -7,25 +7,25 @@
 
         <div class="flex flex-col gap-7 text-lg tracking-wide px-10 sm:px-0">
             <div class="flex gap-5">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 10H18M10 2L10 18" stroke="#F9BD6B" stroke-width="3" stroke-linecap="round" />
                 </svg>
                 <p class="text-sm sm:text-base">Tener 21 años o más.</p>
             </div>
             <div class="flex gap-5">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 10H18M10 2L10 18" stroke="#F9BD6B" stroke-width="3" stroke-linecap="round" />
                 </svg>
                 <p class="text-sm">Tener una camioneta con una capacidad 600 a 2000 kg.</p>
             </div>
             <div class="flex gap-5">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 10H18M10 2L10 18" stroke="#F9BD6B" stroke-width="3" stroke-linecap="round" />
                 </svg>
                 <p class="text-sm">Cumplir con todos los requisitos legales como VTV, Cédula Verde, Licencia de Conducir, etc.</p>
             </div>
             <div class="flex gap-5">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg class="flex-shrink-0" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M2 10H18M10 2L10 18" stroke="#F9BD6B" stroke-width="3" stroke-linecap="round" />
                 </svg>
                 <p class="text-sm">Comprometerse a brindar un servicio de calidad.</p>
