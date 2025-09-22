@@ -1,6 +1,7 @@
 <template>
     <div class="drawer">
         <input id="my-drawer" type="checkbox" class="drawer-toggle" v-model="open" />
+        
         <div class="drawer-content">
             <!-- Botón hamburguesa -->
             <label for="my-drawer" class="drawer-button cursor-pointer">
@@ -14,6 +15,7 @@
                 </svg>
             </label>
         </div>
+
         <div class="drawer-side z-50">
             <label for="my-drawer" aria-label="close sidebar" class="drawer-overlay"></label>
 

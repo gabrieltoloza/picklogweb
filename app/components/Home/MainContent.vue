@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <div class="sm:hidden fixed bottom-24 left-1/2 -translate-x-1/2 flex justify-center items-center z-50 w-auto">
+    <div class="sm:hidden fixed bottom-24 left-1/2 -translate-x-1/2 flex justify-center items-center z-40 w-auto">
         <NuxtLink to="https://www.picklog.com.ar/tracking">
             <IconBox />
         </NuxtLink>

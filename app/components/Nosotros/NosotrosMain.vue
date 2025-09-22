@@ -1,15 +1,14 @@
 <template>
     <section class="pt-20 bg-transparent text-white min-h-[600px] font-montserrat">
-        <div class="container px-4 ml-5 flex flex-col sm:flex-row">
-
+        <div class="container mx-auto px-8 sm:px-4 flex flex-col sm:flex-row">
             <!-- Primer div -->
-            <div class="max-w-4xl mx-auto text-center w-1/2 justify-start flex flex-col items-center gap-10">
-                <div class="pr-80">
+            <div class="max-w-4xl w-full sm:w-1/2 flex flex-col items-start gap-10">
+                <div class="pr-0 sm:pr-32">
                     <Dactilar />
                 </div>
-                <h1 class="text-5xl font-bold mb-6 pt-10 pr-44 text-[#F9BD6B]">Nosotros</h1>
-                <div class="text-xl mb-8 w-[400px] flex flex-col items-start text-start">
-                    <p> Somos una pyme de logística con mas de 15 años de experiencia en el
+                <h1 class="text-5xl font-bold mb-6 pt-10 sm:pr-20 text-[#F9BD6B] text-left">Nosotros</h1>
+                <div class="text-xl mb-8 w-full max-w-[400px] flex flex-col items-start text-start">
+                    <p> Somos una pyme de logística con más de 15 años de experiencia en el
                         mercado.
                     </p>
                     <p class="pt-10 sm:pt-0 text-[#F9BD6B] font-medium sm:font-normal sm:text-white">
@@ -19,12 +18,12 @@
             </div>
 
             <!-- Segundo div -->
-            <div class="flex flex-col gap-5 sm:w-1/2 items-center justify-center pt-32">
+            <div class="flex flex-col gap-5 w-full sm:w-1/2 items-center justify-center pt-12 sm:pt-32">
                 <div class="estadistica-box flex gap-10 p-4 px-10 border border-white rounded-2xl bg-[#1B2329]">
                     <h3 class="text-3xl text-[#F9BD6B] font-semibold">+<span id="clientes">0</span></h3>
                     <p>Clientes</p>
                 </div>
-                <div class="estadistica-box flex gap-10 p-4  border border-white rounded-2xl bg-[#1B2329]">
+                <div class="estadistica-box flex gap-10 p-4 border border-white rounded-2xl bg-[#1B2329]">
                     <h3 class="text-3xl text-[#F9BD6B] font-semibold">+<span id="camionetas">20</span></h3>
                     <p>Camionetas</p>
                 </div>
@@ -33,7 +32,6 @@
                     <p>Empleados</p>
                 </div>
             </div>
-            
         </div>
     </section>
 </template>
