@@ -45,7 +45,6 @@
                     </span>
                 </div>
 
-
             </div>
         </div>
     </div>
@@ -95,4 +94,9 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
     pointer-events: none;
     z-index: 9;
 }
+
+@media (max-width: 360px) {
+  /* Estilos para dispositivos de 360px de ancho */
+}
+
 </style>
