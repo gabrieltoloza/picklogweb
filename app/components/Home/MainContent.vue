@@ -9,7 +9,7 @@
                     </h1>
                 </div>
 
-                <div class="mb-10 sm:mt-0 sm:pt-24 text-white flex flex-col sm:flex-row gap-5 sm:gap-0 h-50 w-full">
+                <div class="oklogo-and-paragraph mb-10 sm:mt-0 sm:pt-24 text-white flex flex-col sm:flex-row gap-5 sm:gap-0 h-50 w-full">
                     <span class="flex justify-center">
                         <OkLogo />
                     </span>
@@ -49,7 +49,7 @@
         </div>
     </div>
 
-    <div class="sm:hidden fixed bottom-24 left-1/2 -translate-x-1/2 flex justify-center items-center z-40 w-auto">
+    <div class="inconbox-mobile-custom sm:hidden fixed bottom-24 left-1/2 -translate-x-1/2 flex justify-center items-center z-40 w-auto">
         <NuxtLink to="https://www.picklog.com.ar/tracking">
             <IconBox />
         </NuxtLink>
@@ -103,6 +103,15 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
 
     .bottom-mobile-custom {
         padding-bottom: 176px;
+    }
+    
+    .inconbox-mobile-custom {
+        bottom: 55px;
+    }
+
+    .oklogo-and-paragraph {
+        gap: 35px;
+        padding-top: 20px;
     }
 
 }

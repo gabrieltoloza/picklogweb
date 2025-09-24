@@ -17,7 +17,6 @@ export default {
                 'xs': '360px',
             }
         },
-        
     },
     plugins: [require("daisyui")],
     

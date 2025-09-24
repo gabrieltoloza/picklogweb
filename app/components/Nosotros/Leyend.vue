@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-transparent min-h-[400px] flex justify-start p-16 sm:px-48">
+    <div class="legends-custom bg-transparent min-h-[400px] flex justify-start p-16 sm:px-48">
         <p class="sm:w-[44%] ml-4 text-white tracking-wide">
             En Pick & Log creemos en el trabajo en equipo como base de todo. Sabemos que cuando cada parte funciona
             bien, el todo avanza. Por eso fomentamos la colaboración y la búsqueda constante de mejorar. Apostamos a la
@@ -14,4 +14,16 @@
 
 </script>
 
-<style scoped></style>
+<style scoped>
+
+@media (max-width: 360px) {
+
+    .legends-custom {
+        padding-inline: 24px;
+    }
+
+
+
+}
+
+</style>
