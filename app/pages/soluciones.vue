@@ -12,6 +12,45 @@
 import DropdownSolutions from '~/components/Soluciones/DropdownSolutions.vue';
 import MainSolutions from '~/components/Soluciones/MainSolutions.vue';
 
+
+useSeoMeta({
+    title: 'Soluciones Tecnológicas WMS y TMS - Logística de Última Milla',
+    description: 'Tecnología avanzada para logística: WMS, TMS, tomador de pedidos personalizado y soporte IT. Soluciones integradas para tu operativa de última milla.',
+    keywords: 'WMS, TMS, sistema gestión almacén, sistema gestión transporte, tomador pedidos, soporte IT, integración tienda online',
+    ogTitle: 'Soluciones WMS y TMS - Tecnología Logística',
+    ogDescription: 'Descubre nuestra tecnología: WMS, TMS, tomador de pedidos y soporte IT para tu operativa logística.',
+    ogImage: 'https://tudominio.com/images/soluciones-social.jpg',
+    ogUrl: 'https://tudominio.com/soluciones',
+    robots: 'index,follow'
+})
+
+
+useHead({
+    link: [
+        { rel: 'canonical', href: 'https://tudominio.com/soluciones' }
+    ],
+    script: [
+        {
+            type: 'application/ld+json',
+            innerHTML: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Product",
+                "name": "Soluciones Tecnológicas Logísticas",
+                "description": "Suite completa de soluciones WMS, TMS y soporte IT",
+                "brand": {
+                    "@type": "Organization",
+                    "name": "Pick & Log"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "availability": "https://schema.org/InStock",
+                    "priceValidUntil": "2025-12-31"
+                }
+            })
+        }
+    ]
+})
+
 </script>
 
 
