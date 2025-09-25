@@ -142,15 +142,20 @@ const props = defineProps<{
     logos?: { src: string; alt: string }[]
 }>()
 
+
 const ctaHref = props.ctaHref ?? '/transportistas-formulario'
 const logos = props.logos ?? [
     // Ejemplo por defecto (cambiá las rutas por las tuyas)
-    { src: '/nestle.png', alt: 'Fenicio' },
-    { src: '/cascanueces.png', alt: 'Cascanueces' },
-    { src: '/boss.webp', alt: 'BOSS RECOVERY' },
-    { src: '/campsfoods.webp', alt: 'Campsfoods' },
-    { src: '/craftmoments.png', alt: 'Craft Moments' },
-    { src: '/zulki.webp', alt: 'Zulki' },
+    { src: '/marcas/nestle.png', alt: 'Nestle' },
+    { src: '/marcas/vacavaliente.png', alt: 'Vacavaliente' },
+    { src: '/marcas/buscalibre.png', alt: 'Buscalibre' },
+    { src: '/marcas/craftmoments.png', alt: 'Craft Moments' },
+    { src: '/marcas/fenicio.png', alt: 'Fenicio' },
+    { src: '/marcas/tuenti.png', alt: 'Tuenti' },
+    { src: '/marcas/zulki.png', alt: 'Zulki' },
+    { src: '/marcas/boss.png', alt: 'Boss' },
+    { src: '/marcas/sportclub.png', alt: 'Sport Club' },
+    { src: '/marcas/uarstore.png', alt: 'Uar Store' },
 ]
 
 const index = ref(0)
