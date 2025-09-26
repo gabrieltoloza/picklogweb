@@ -39,12 +39,12 @@
 
                 <!-- Contenedor del botón Tracking -->
                 <div class="w-full flex flex-col gap-5 pl-6 justify-start">
-                    <NuxtLink to="https://www.picklog.com.ar/tracking" @click="closeDrawer" class="w-full">
+                    <NuxtLink to="/tracking" @click="closeDrawer" class="w-full">
                         <button class="text-[#1B2329] font-medium">
                             TRACKING
                         </button>
                     </NuxtLink>
-                    <NuxtLink to="https://www.picklog.com.ar/tracking" @click="closeDrawer" class="w-full">
+                    <NuxtLink to="/" @click="closeDrawer" class="w-full">
                         <button class="text-[#1B2329] font-medium">
                             INICIAR SESION
                         </button>

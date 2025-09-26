@@ -1,8 +1,5 @@
 <template>
-    <div :class="[
-        'fixed top-0 left-0 right-0 z-50 p-5 px-16 h-32 transition-all duration-300',
-        scrolled ? 'sm:bg-[#1B2329] backdrop-blur-sm shadow-lg' : ''
-    ]">
+    <div :class="navbarClasses">
         <div class="flex items-center justify-end sm:justify-between h-full w-full relative">
 
             <!-- Logo a la izquierda (solo desktop) -->
@@ -32,7 +29,7 @@
             <!-- Botón derecha (solo desktop) -->
             <div class="z-10 hidden lg:flex">
                 <div class="flex gap-10 items-center">
-                    <NuxtLink to="https://www.picklog.com.ar/tracking">
+                    <NuxtLink to="/tracking">
                         <button
                             class="border border-[#F9BD6B] rounded-3xl p-3 px-9 text-white font-medium cursor-pointer hover:bg-[#F9BD6B] hover:text-[#1B2329] transition-all duration-300">
                             TRACKING
@@ -57,7 +54,11 @@ import PicklogOrangeLogo from '~/components/svg/PickLogLogoOrange.vue'
 import PointNavigation from '~/components/svg/PointNavigation.vue'
 import MenuBurguer from '../svg/Mobile/MenuBurguer.vue'
 
+
+
 const scrolled = ref(false)
+
+const route = useRoute()
 
 const handleScroll = () => {
     scrolled.value = window.scrollY > 50
@@ -98,6 +99,14 @@ const items = [
 const getIcon = (iconName: string) => {
     return 'div'
 }
+
+// Clases condicionales para el navbar
+const navbarClasses = computed(() => [
+    'fixed top-0 left-0 right-0 z-50 p-5 px-16 h-32 transition-all duration-300',
+    scrolled.value ? 'sm:bg-[#1B2329] backdrop-blur-sm shadow-lg' : '',
+    route.path === '/tracking' ? 'bg-[#F2F2F3]' : ''
+])
+
 </script>
 
 <style scoped>

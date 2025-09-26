@@ -158,6 +158,7 @@ const logos = props.logos ?? [
     { src: '/marcas/uarstore.png', alt: 'Uar Store' },
 ]
 
+
 const index = ref(0)
 const prev = () => (index.value = (index.value - 1 + logos.length) % logos.length)
 const next = () => (index.value = (index.value + 1) % logos.length)
