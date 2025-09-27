@@ -1,6 +1,7 @@
 <template>
     <div class="bg-[#F2F2F3]">
-        <div class="bg-transparent flex flex-col justify-center items-center px-3 p-4 pt-28 sm:px-20 sm:pt-32 min-h-[100px]">
+        <div
+            class="bg-transparent flex flex-col justify-center items-center px-3 p-4 pt-28 sm:px-20 sm:pt-32 min-h-[100px]">
             <div>
                 <ShippingIconTracking />
             </div>
@@ -11,13 +12,16 @@
         </div>
 
         <div
-            class="flex flex-cr lg:flex-row gap-1 bg-transparent lg:justify-center lg:items-start px-3 sm:px-20 sm:pt-0 min-h-[1000px] h-auto">
+            class="flex flex-col gap-1 bg-transparent items-center px-3 sm:px-20 sm:pt-0 min-h-[1000px] h-auto">
             <div class="w-full  p-4 rounded-box  mb-4 lg:mb-0 sm:flex sm:flex-col">
 
 
-                <span class="font-normal text-md text-[#a59f9f] text-center pl-7 sm:pl-0 md:pr-14 md:mr-5 lg:pr-28 lg:mr-10 xl:pr-50 xl:mr-8">Ingrese el código de seguimiento</span>
+                <span
+                    class="font-normal text-md text-[#a59f9f] text-center pl-7 sm:pl-0 md:pr-14 md:mr-5 lg:pr-28 lg:mr-10 xl:pr-50 xl:mr-8">Ingrese
+                    el código de seguimiento</span>
 
-                <fieldset class="flex flex-col sm:flex-row justify-center items-center bg-transparent sm:gap-5 rounded-lg w-full p-4 sm:pt-0">
+                <fieldset
+                    class="flex flex-col sm:flex-row justify-center items-center bg-transparent sm:gap-5 rounded-lg w-full p-4 sm:pt-0">
 
                     <!-- Input estilizado como la imagen -->
                     <div
@@ -39,24 +43,29 @@
 
 
                     <div class="inconbox-mobile-custom flex justify-center pt-10 sm:pt-0 sm:pl-5">
-                        <NuxtLink to="/">
-                            <IconBox :height="75" :width="75"/>
-                        </NuxtLink>
+                        <button class="pointer" @click="handlerRequestShippingState">
+                            <IconBox :height="75" :width="75" />
+                        </button>
                     </div>
 
                 </fieldset>
             </div>
 
-            <div class="w-full lg:w-1/3" v-if="shippingStatesResult === undefined && resultMessage !== ''">
+            <div class="w-full lg:w-1/2" v-if="shippingStatesResult === undefined && resultMessage !== ''">
                 <NotFoundResult :message="resultMessage" />
             </div>
 
-            <div v-else-if="shippingStatesResult !== undefined" class="w-full lg:w-2/3 border rounded-lg  bg-white">
+            <div v-else-if="shippingStatesResult !== undefined" class="w-full lg:w-2/3">
                 <DetailTrackingShipping :shipping-history="shippingStatesResult.result" :shipping-code="setShippingCode"
                     :info-shipping-state="shippingInfoState?.result || []" />
             </div>
         </div>
     </div>
+
+    <!-- Loading session -->
+    <ModalLoading v-if="modalState" :open="modalState" />
+
+
 </template>
 
 
@@ -75,17 +84,17 @@ import NotFoundResult from '~/components/TrackingShipping/SubComponents/NotFound
 import { getHistoryShipping } from '~/components/TrackingShipping/Composables/GetTrackingShipping';
 import { getInfoState } from '~/components/TrackingShipping/Composables/GetStateShipping';
 import IconBox from '../svg/Mobile/IconBox.vue';
+import ModalLoading from './SubComponents/ModalLoading.vue';
+import { getAuthAkeronJWT } from './Composables/JWT/GetAkeronJWT';
 
 
 
-// Variable reactiva con credenciales de akeron, no servira ya que debemos hacer un backend para ello.
-// Variable reactiva con credenciales de akeron, no servira ya que debemos hacer un backend para ello.
 
-// const orderDetails = useOrderDetail();
-
-
-// Getters
-const getJWTAkeron = computed(() => orderDetails.getAkeronJWTStore?.api_token || null)
+// VARIABLES HARDCODEADAS
+// VARIABLES HARDCODEADAS
+// VARIABLES HARDCODEADAS
+const apiClient = '40ef0dfc18ca5419281f95b9e7b1de4926156adb1b78e0e6f03221af22aa958a';
+const apiSecret = '2837789c951e17d05c0f8335bb1d33e23928ca8c293e82cbd81a9b961f20f4b0';
 
 
 const modalState = ref<boolean>(false)
@@ -117,42 +126,49 @@ const handlerRequestShippingState = async (): Promise<void> => {
     // Limpiar resultados anteriores
     resultMessage.value = ''
     shippingStatesResult.value = undefined
+    shippingInfoState.value = undefined // Limpiar info anterior
     modalState.value = true;
 
     try {
 
+        const getJWTAkeron = await getAuthAkeronJWT(apiClient, apiSecret)
 
-        if (!getJWTAkeron.value) {
+        if (!getJWTAkeron) {
             modalState.value = false;
             throw new Error("No se pudo obtener el jwt del store!")
         }
 
+        let statusShipping, infoShipping
 
-        // Realizar consulta de historial de envio
-        let statusShipping = await getHistoryShipping(inputShippingCode.value, getJWTAkeron.value)
-        let infoStateShipping = await getInfoState(inputShippingCode.value, getJWTAkeron.value)
+        // Realizar ambas consultas en paralelo si hay token
+        if(getJWTAkeron.result[0]?.api_token !== undefined) {
+            const apiToken = getJWTAkeron.result[0]?.api_token
+            const [historyRes, infoRes] = await Promise.all([
+                getHistoryShipping(inputShippingCode.value, apiToken),
+                getInfoState(inputShippingCode.value, apiToken)
+            ])
+            statusShipping = historyRes
+            infoShipping = infoRes
+        }
 
-
-        if (!statusShipping.status) {
+        if (!statusShipping?.status) {
             modalState.value = false;
-            throw new Error(statusShipping.msg);
-
-        } else if (!infoStateShipping.status) {
-            modalState.value = false;
-            throw new Error(infoStateShipping.msg)
+            throw new Error(statusShipping?.msg);
 
         } else {
             const successResponse = statusShipping as TrackingSuccess
-            const successInfoShippingResponse = infoStateShipping as StateSuccess;
             shippingStatesResult.value = successResponse
-            shippingInfoState.value = successInfoShippingResponse
             setShippingCode.value = inputShippingCode.value
+            // Guardar info adicional del estado
+            if (infoShipping?.status) {
+                shippingInfoState.value = infoShipping as StateSuccess
+            } else {
+                shippingInfoState.value = undefined
+            }
             modalState.value = false
             console.log(shippingStatesResult.value)
             console.log(shippingInfoState.value)
         }
-
-
 
     } catch (error) {
         modalState.value = false;

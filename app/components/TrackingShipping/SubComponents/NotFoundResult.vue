@@ -1,5 +1,5 @@
 <template>
-    <div class="p-4 flex justify-center font-semibold text-xl text-red-500 gap-5 h-auto bg-base-200 rounded-box">
+    <div class="p-4 text-center font-semibold text-xl bg-transparent text-red-700/70 gap-5 h-auto rounded-box sm:pr-24">
         <span>{{ props.message }}</span>
     </div>
 </template>

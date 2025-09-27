@@ -1,15 +1,15 @@
 <template>
-    <div class="bg-gray-200 shadow-sm flex items-center p-3 border rounded-box border-gray-400">
-        <div :class="['w-8 h-8 rounded-full flex items-center justify-center border border-gray-400', coloState]">
+    <div class="flex items-center p-3">
+        <div :class="[' rounded-full flex items-center justify-center', coloState]">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
                 xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
             </svg>
         </div>
-        <div class="ml-3">
-            <p class="text-gray-800 font-medium">{{ props.state }}</p>
+        <div class="ml-3 flex flex-col">
+            <p class="text-gray-800 font-medium capitalize">{{ props.state }}</p>
             <p v-if="props.state === 'EN DEPOSITO'" class="text-gray-800 font-normal">{{ "Deposito BUE" }}</p>
-            <p class="text-gray-500 text-sm">{{ props.date }}</p>
+            <p class="text-gray-500 text-sm pt-3">{{ props.date }}</p>
         </div>
         <div class="ml-auto">
             <!-- POSIBLE CONTENIDO AQUI,  -->

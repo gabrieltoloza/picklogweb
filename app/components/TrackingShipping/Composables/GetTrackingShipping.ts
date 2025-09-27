@@ -22,7 +22,7 @@ export const getHistoryShipping = async (
 
     try {
 
-        const baseURL = `/v1/shipping/historial/`;
+        const baseURL = `https://picklog.akeron.net/api/v1/shipping/historial/`;
 
         const request = await fetch(baseURL + _shippingCode, {
             method: 'GET',

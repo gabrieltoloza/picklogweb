@@ -20,7 +20,7 @@ export const getInfoState = async (
 
     try {
 
-        const baseURL = `/v1/shipping/state/`
+        const baseURL = `https://picklog.akeron.net/api/v1/shipping/state/`
 
         const request = await fetch(baseURL + _shippingCode, {
             method: 'GET',
