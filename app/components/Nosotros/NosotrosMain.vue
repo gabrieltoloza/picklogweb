@@ -1,8 +1,9 @@
 <template>
     <section class="pt-20 bg-transparent text-white min-h-[600px] font-montserrat">
         <div class="container mx-auto px-8 sm:px-4 flex flex-col sm:flex-row">
+
             <!-- Primer div -->
-            <div class="max-w-4xl w-full sm:w-1/2 flex flex-col items-start gap-10">
+            <div class="max-w-4xl w-full sm:w-1/2 flex flex-col items-start gap-10 sm:pl-32 lg:pl-48">
                 <div class="pr-0 sm:pr-32">
                     <Dactilar />
                 </div>

@@ -15,13 +15,13 @@
             <div class="w-full  p-4 rounded-box  mb-4 lg:mb-0 sm:flex sm:flex-col">
 
 
-                <span class="font-normal text-md text-[#a59f9f] text-center pl-7 sm:pl-0 md:pr-14 md:mr-5 lg:pr-28 lg:mr-10 xl:pr-50 xl:mr-32">Ingrese el código de seguimiento</span>
+                <span class="font-normal text-md text-[#a59f9f] text-center pl-7 sm:pl-0 md:pr-14 md:mr-5 lg:pr-28 lg:mr-10 xl:pr-50 xl:mr-8">Ingrese el código de seguimiento</span>
 
                 <fieldset class="flex flex-col sm:flex-row justify-center items-center bg-transparent sm:gap-5 rounded-lg w-full p-4 sm:pt-0">
 
                     <!-- Input estilizado como la imagen -->
                     <div
-                        class="sm:w-[30%] sm:h-[50%] flex justify-center items-center bg-[#FFFFFF] rounded-lg gap-3 px-4 py-3 shadow-sm hover:border-gray-300 focus-within:border-[#F9BD6B] focus-within:ring-2 focus-within:ring-[#F9BD6B] focus-within:ring-opacity-20 transition-all duration-200 mb-4 sm:mb-0">
+                        class="lg:w-[30%] sm:h-[50%] md:w-[50%] lg: flex justify-center items-center bg-[#FFFFFF] rounded-lg gap-3 px-4 py-3 shadow-sm hover:border-gray-300 focus-within:border-[#F9BD6B] focus-within:ring-2 focus-within:ring-[#F9BD6B] focus-within:ring-opacity-20 transition-all duration-200 mb-4 sm:mb-0">
                         <!-- SVG Icon (puedes cambiarlo por el que prefieras) -->
                         <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path
