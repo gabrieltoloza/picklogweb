@@ -55,7 +55,7 @@
                 <NotFoundResult :message="resultMessage" />
             </div>
 
-            <div v-else-if="shippingStatesResult !== undefined" class="w-full lg:w-2/3">
+            <div v-else-if="shippingStatesResult !== undefined" class="w-full lg:w-2/3 pb-16">
                 <DetailTrackingShipping :shipping-history="shippingStatesResult.result" :shipping-code="setShippingCode"
                     :info-shipping-state="shippingInfoState?.result || []" />
             </div>
@@ -166,12 +166,14 @@ const handlerRequestShippingState = async (): Promise<void> => {
                 shippingInfoState.value = undefined
             }
             modalState.value = false
+            inputShippingCode.value = '';
             console.log(shippingStatesResult.value)
             console.log(shippingInfoState.value)
         }
 
     } catch (error) {
         modalState.value = false;
+        inputShippingCode.value = '';
         error instanceof Error
             ? resultMessage.value = 'El código de envio ingresado no arrojó resultados'
             : resultMessage.value = 'Ocurrio un error al intentar buscar el envio'

@@ -2,16 +2,16 @@
 
     <section class="p-4 flex flex-col md:flex-row justify-start items-center gap-10 h-auto bg-transparent rounded-box">
         <div class="flex flex-col w-full md:w-[400px] md:h-[300px] justify-center items-center bg-[#EAEBEC] rounded-2xl">
-            <div class="font-semibold p-4 text-lg flex lg:pl-8 w-full">
+            <div class="font-semibold p-4 text-lg flex sm:pl-8 lg:pl-8 w-full">
                 <span>Datos del envio</span>
             </div>
-            <div class="flex flex-col font-medium text-gray-600">
+            <div class="flex flex-col font-medium text-gray-600 p-4 pt-0 sm:p-8 sm:pt-0">
                 <div class="">
-                    <span class="text-lg">Nombre: </span>
+                    <span class="text-lg text-gray-900">Nombre: </span>
                     <span class="text-base">{{ receives }}</span>
                 </div>
                 <div class="">
-                    <span class="text-lg">Dirección: </span>
+                    <span class="text-lg text-gray-900">Dirección: </span>
                     <span class="text-base">{{ address }}, {{ location }}</span>
                 </div>
                 <!-- Agregar informacion segun se solicite -->
