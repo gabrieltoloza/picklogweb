@@ -57,7 +57,7 @@ import MenuBurguer from '../svg/Mobile/MenuBurguer.vue'
 
 
 const scrolled = ref(false)
-
+const windowWidth = ref(0)
 const route = useRoute()
 
 const handleScroll = () => {
@@ -65,6 +65,10 @@ const handleScroll = () => {
 }
 
 onMounted(() => {
+    windowWidth.value = window.innerWidth
+    window.addEventListener('resize', () => {
+        windowWidth.value = window.innerWidth
+    })
     window.addEventListener('scroll', handleScroll)
 })
 
@@ -103,8 +107,15 @@ const getIcon = (iconName: string) => {
 // Clases condicionales para el navbar
 const navbarClasses = computed(() => [
     'fixed top-0 left-0 right-0 z-50 p-5 px-16 h-32 transition-all duration-300',
-    scrolled.value ? 'sm:bg-[#1B2329] backdrop-blur-sm shadow-lg' : '',
-    route.path === '/tracking' ? 'bg-[#F2F2F3]' : ''
+    // Si está en tracking y no es mobile, fondo oscuro SIEMPRE
+    (route.path === '/tracking' && window.innerWidth >= 640)
+        ? 'bg-[#1B2329] backdrop-blur-sm shadow-lg'
+        // Si no, solo al hacer scroll en desktop/tablet
+        : (scrolled.value ? 'sm:bg-[#1B2329] backdrop-blur-sm shadow-lg' : ''),
+    // En mobile, fondo claro en tracking
+    (route.path === '/tracking' && window.innerWidth < 640)
+        ? 'bg-[#F2F2F3]'
+        : ''
 ])
 
 </script>
