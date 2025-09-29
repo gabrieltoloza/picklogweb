@@ -123,7 +123,7 @@ const handlerRequestShippingState = async (): Promise<void> => {
 
     try {
         // Llama a tu backend (ajusta la URL si es necesario)
-        const response = await fetch('http://api.picklog.online/v2/tracking/historial', {
+        const response = await fetch('https://api.picklog.online/v2/tracking/historial', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
