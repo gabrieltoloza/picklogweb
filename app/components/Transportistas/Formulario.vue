@@ -55,7 +55,7 @@
                             </div>
                             <div>
                                 <label for="apellido" class="block mb-2">Apellido*</label>
-                                <input id="apellido" v-model="formulario.apellido" type="tel"
+                                <input id="apellido" v-model="formulario.apellido" type="text"
                                     class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Completá con tu apellido" required>
                             </div>
@@ -86,7 +86,7 @@
                             </div>
                             <div>
                                 <label for="phone" class="block mb-2">Numero de Telefono*</label>
-                                <input id="phone" v-model="formulario.phone" type="text"
+                                <input id="phone" v-model="formulario.phone" type="tel"
                                     class="w-full p-3 border-l-2 focus:outline-none"
                                     placeholder="Completá con tu numero de teléfono" required>
                             </div>
