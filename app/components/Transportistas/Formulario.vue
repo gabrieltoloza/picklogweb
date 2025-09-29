@@ -17,7 +17,8 @@
 
             </div>
 
-            <div class="w-full sm:w-[80%] mx-auto flex flex-col bg-white rounded-[45px] sm:rounded-lg px-10 sm:px-32 relative">
+            <div
+                class="w-full sm:w-[80%] mx-auto flex flex-col bg-white rounded-[45px] sm:rounded-lg px-10 sm:px-32 relative">
                 <span class="hidden sm:inline-block self-end h-auto float-right absolute right-1 sm:right-24">
 
                     <svg class="cursor-pointer" width="128" height="128" viewBox="0 0 128 128" fill="none"
@@ -35,7 +36,8 @@
                 </span>
 
 
-                <h1 class="hidden text-5xl h-[70px] font-semibold my-14 py-20 sm:flex sm:flex-col gap-7 text-start text-[#1B2329]">
+                <h1
+                    class="hidden text-5xl h-[70px] font-semibold my-14 py-20 sm:flex sm:flex-col gap-7 text-start text-[#1B2329]">
                     <span>Formulario de Postulación</span>
                     <span>para Transportistas</span>
                 </h1>
@@ -106,10 +108,14 @@
                                     nombre?*
                                 </label>
                                 <div class="flex gap-5 m-5 ml-7">
-                                    <button
-                                        class="bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer">SI</button>
-                                    <button
-                                        class="bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer">NO</button>
+                                    <button type="button" :class="[
+                                        'bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer',
+                                        formulario.registrado === 'SI' ? 'ring-2 ring-[#F9BD6B] font-bold' : ''
+                                    ]" @click="formulario.registrado = 'SI'">SI</button>
+                                    <button type="button" :class="[
+                                        'bg-gray-200/70 w-[50px] h-[35px] rounded-md cursor-pointer',
+                                        formulario.registrado === 'NO' ? 'ring-2 ring-[#F9BD6B] font-bold' : ''
+                                    ]" @click="formulario.registrado = 'NO'">NO</button>
                                 </div>
                             </div>
                         </div>
@@ -119,7 +125,7 @@
 
                     <!-- Botón de envío -->
                     <div class="flex justify-center sm:justify-end pt-10">
-                        <button type="submit"
+                        <button
                             class="flex gap-5 cursor-pointer items-center bg-[#F9BD6B] text-[#1B2329] px-10 py-4 rounded-full font-medium text-lg hover:bg-[#F9BD6B]/80 transition-colors">
                             Enviar formulario
                             <RightRowSlogan />
@@ -134,7 +140,11 @@
 
 
 <script setup lang="ts">
+import { reactive } from 'vue';
+import { showToast } from '~/utils/toastWrapper';
 import RightRowSlogan from '../svg/RightRowSlogan.vue';
+import { enviarFormularioTransportista } from './Composables/useEnviarFormulario';
+import type { FormularioResponse } from './interface/formulario.response';
 
 const formulario = reactive({
     nombre: '',
@@ -145,25 +155,49 @@ const formulario = reactive({
     dni: '',
     phone: '',
     marca: '',
-    patente: ''
+    patente: '',
+    registrado: ''
 });
+
+// Funcion para limpiar el formulario de inscripcion
+function limpiarFormulario() {
+    formulario.nombre = '';
+    formulario.apellido = '';
+    formulario.barrio = '';
+    formulario.pais = '';
+    formulario.correo = '';
+    formulario.dni = '';
+    formulario.phone = '';
+    formulario.marca = '';
+    formulario.patente = '';
+    formulario.registrado = '';
+}
+
 
 const enviarFormulario = async () => {
     try {
-        // Aquí implementarías la lógica para enviar el formulario
-        // Por ejemplo, mediante una API o servicio de correo
-        console.log('Formulario enviado:', formulario);
+        const result: FormularioResponse = await enviarFormularioTransportista(formulario);
 
-        // Simulando envío exitoso
-        alert('¡Gracias por tu solicitud! Te contactaremos pronto.');
-
-        // Opcionalmente redirigir a una página de confirmación
-        // navigateTo('/transportistas/gracias');
+        if (result.success) {
+            showToast('¡Gracias por tu solicitud! Te contactaremos pronto.', 'success');
+            limpiarFormulario(); // Limpia el formulario
+            setTimeout(() => {
+                navigateTo('/transportistas');
+            }, 8000)
+        } else if (result.type === 'validation') {
+            showToast('Errores de validación:\n' + result.error.map(e => e.message).join('\n'), 'error');
+        } else if (result.type === 'mail') {
+            showToast('Error al enviar el correo: ' + result.error, 'error');
+        } else {
+            showToast('Ocurrió un error al enviar el formulario. Por favor intenta nuevamente.', 'error');
+        }
     } catch (error) {
         console.error('Error al enviar el formulario:', error);
-        alert('Ocurrió un error al enviar el formulario. Por favor intenta nuevamente.');
+        showToast('Ocurrió un error al enviar el formulario. Por favor intenta nuevamente.', 'error');
     }
 };
+
+
 </script>
 
 <style scoped>

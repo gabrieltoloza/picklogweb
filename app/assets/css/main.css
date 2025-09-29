@@ -9,3 +9,46 @@
     padding-top: 0 !important;
   }
 }
+
+
+
+/* Toastify barra de progreso y fondo oscuro */
+.custom-toastify {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 8px !important;
+  min-height: 48px; /* altura base para mobile */
+}
+
+/* Más alto en dispositivos grandes */
+@media (min-width: 640px) {
+  .custom-toastify {
+    min-height: 64px;      /* altura total del toast en desktop */
+    font-size: 1.1rem;
+    padding-bottom: 4px !important; /* menos espacio entre texto y barra */
+  }
+}
+
+/* Más padding-bottom en mobile para separar texto de la barra */
+@media (max-width: 639px) {
+  .custom-toastify {
+    padding-bottom: 20px !important; /* más espacio para la barra en mobile */
+    font-size: 1rem;
+  }
+}
+
+.custom-toastify::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 4px;
+  width: 100%;
+  background: linear-gradient(90deg, #f9bd6b 0%, #f97316 100%);
+  animation: toastify-progress 8s linear forwards;
+}
+
+@keyframes toastify-progress {
+  from { width: 100%; }
+  to { width: 0%; }
+}

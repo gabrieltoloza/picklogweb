@@ -13,7 +13,7 @@ export default defineNuxtConfig({
             mode: 'out-in',
             appear: true
         },
-        baseURL: '/picklogweb/',
+        baseURL: '/',
         head: {
             title: 'Logística Empresarial - Última Milla | Tu Empresa',
             htmlAttrs: {

@@ -107,76 +107,47 @@ const shippingStatesResult = ref<TrackingSuccess | undefined>(undefined);
 const shippingInfoState = ref<StateSuccess | undefined>(undefined);
 
 
-// Verificar si ya tenemos un token al cargar el componente
-onMounted(async () => {
-
-
-})
-
 
 // POSIBLE MEJORA UNIFICANDO LOS COMPOSABLES DE CONSULTA DE ESTADO Y DE HISTORIAL CON UN "Promise.all"
 const handlerRequestShippingState = async (): Promise<void> => {
-
     if (!inputShippingCode.value.trim()) {
         resultMessage.value = 'Debe ingresar el código de seguimiento'
         return;
-        // early return
     }
 
     // Limpiar resultados anteriores
     resultMessage.value = ''
     shippingStatesResult.value = undefined
-    shippingInfoState.value = undefined // Limpiar info anterior
+    shippingInfoState.value = undefined
     modalState.value = true;
 
     try {
+        // Llama a tu backend (ajusta la URL si es necesario)
+        const response = await fetch('http://api.picklog.online/v2/tracking/historial', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ codigo_envio: inputShippingCode.value })
+        });
 
-        const getJWTAkeron = await getAuthAkeronJWT(apiClient, apiSecret)
+        const data = await response.json();
 
-        if (!getJWTAkeron) {
+        if (!data.success || !data.data?.historial?.status) {
             modalState.value = false;
-            throw new Error("No se pudo obtener el jwt del store!")
+            throw new Error(data.data?.historial?.msg || 'No se encontraron resultados');
         }
 
-        let statusShipping, infoShipping
-
-        // Realizar ambas consultas en paralelo si hay token
-        if(getJWTAkeron.result[0]?.api_token !== undefined) {
-            const apiToken = getJWTAkeron.result[0]?.api_token
-            const [historyRes, infoRes] = await Promise.all([
-                getHistoryShipping(inputShippingCode.value, apiToken),
-                getInfoState(inputShippingCode.value, apiToken)
-            ])
-            statusShipping = historyRes
-            infoShipping = infoRes
-        }
-
-        if (!statusShipping?.status) {
-            modalState.value = false;
-            throw new Error(statusShipping?.msg);
-
-        } else {
-            const successResponse = statusShipping as TrackingSuccess
-            shippingStatesResult.value = successResponse
-            setShippingCode.value = inputShippingCode.value
-            // Guardar info adicional del estado
-            if (infoShipping?.status) {
-                shippingInfoState.value = infoShipping as StateSuccess
-            } else {
-                shippingInfoState.value = undefined
-            }
-            modalState.value = false
-            inputShippingCode.value = '';
-            console.log(shippingStatesResult.value)
-            console.log(shippingInfoState.value)
-        }
-
+        // Reutiliza tus interfaces y lógica de presentación
+        shippingStatesResult.value = data.data.historial;
+        shippingInfoState.value = data.data.state;
+        setShippingCode.value = inputShippingCode.value;
+        modalState.value = false;
+        inputShippingCode.value = '';
     } catch (error) {
         modalState.value = false;
         inputShippingCode.value = '';
-        error instanceof Error
-            ? resultMessage.value = 'El código de envio ingresado no arrojó resultados'
-            : resultMessage.value = 'Ocurrio un error al intentar buscar el envio'
+        resultMessage.value = 'El código de envio ingresado no arrojó resultados';
     }
 }
 
