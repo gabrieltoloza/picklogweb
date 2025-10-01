@@ -41,7 +41,7 @@
                 <div class="w-full flex flex-col gap-5 pl-6 justify-start">
                     <NuxtLink to="/tracking" @click="closeDrawer" class="w-full">
                         <button class="text-[#1B2329] font-medium">
-                            TRACKING
+                            Seguí tu pedido
                         </button>
                     </NuxtLink>
                     <NuxtLink to="/" @click="closeDrawer" class="w-full">

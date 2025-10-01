@@ -24,7 +24,7 @@
                         <NuxtLink to="/tracking">
                             <button
                                 class="text-sm font-medium rounded-full w-44 h-12 border border-[#F9BD6B] bg-[#F9BD6B] text-gray-700 z-10 cursor-pointer">
-                                Seguí tu envío
+                                Seguí tu pedido
                             </button>
                         </NuxtLink>
 

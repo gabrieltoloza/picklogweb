@@ -39,7 +39,7 @@ export default defineNuxtConfig({
                 { name: 'ICBM', content: '-34.6118, -58.3960' }
             ],
             link: [
-                { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+                { rel: 'icon', type: 'image/x-icon', href: '/favicon_pick&log.ico' },
                 { rel: 'canonical', href: 'https://tudominio.com' }
             ]
         }

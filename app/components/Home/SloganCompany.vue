@@ -11,10 +11,10 @@
                             Adaptamos la logística a tu operación, <span
                                 class="text-[#F9BD6B]">no al revés</span>
                         </h1>
-                        <button
+                        <NuxtLink to="/soluciones"
                             class="border border-[#F9BD6B] rounded-full p-2 sm:p-2.5 mt-2 sm:mt-2.5 px-6 sm:px-8 w-36 sm:w-44 h-10 sm:h-12 text-gray-700 font-medium cursor-pointer hover:bg-[#F9BD6B] hover:text-[#1B2329] transition-all duration-300">
                             VER MÁS
-                        </button>
+                        </NuxtLink>
                     </div>
                 </div>
 
@@ -41,11 +41,11 @@
                                         </div>
                                         <div
                                             class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 z-10 w-32 h-10">
-                                            <button
+                                            <NuxtLink to="/soluciones"
                                                 class="btn rounded-full w-full h-full px-2 p-2 bg-[#f4f4f4] border-gray-300 text-gray-900 hover:bg-[#F9BD6B] hover:text-[#1B2329] transition-all duration-300">
                                                 <span>Tecnología</span>
                                                 <RightRowSlogan class="ml-1" />
-                                            </button>
+                                            </NuxtLink>
                                         </div>
                                     </div>
                                 </div>
@@ -132,11 +132,11 @@
                             </div>
                             <div
                                 class="absolute left-1/2 bottom-0 transform -translate-x-1/2 translate-y-1/2 z-10 w-28 sm:w-32 md:w-36 h-9 sm:h-10 md:h-11">
-                                <button
+                                <NuxtLink to="/soluciones"
                                     class="btn rounded-full w-full h-full px-3 sm:px-4 md:px-5 p-1 sm:p-2 md:p-3 bg-[#f4f4f4] border-gray-300 text-gray-900 hover:bg-[#F9BD6B] hover:text-[#1B2329] transition-all duration-300">
                                     <span>Tecnología</span>
                                     <RightRowSlogan class="ml-1" />
-                                </button>
+                                </NuxtLink>
                             </div>
                         </div>
 

@@ -160,11 +160,42 @@ const logos = props.logos ?? [
 
 
 const index = ref(0)
-const prev = () => (index.value = (index.value - 1 + logos.length) % logos.length)
-const next = () => (index.value = (index.value + 1) % logos.length)
+let intervalId: number | undefined
+
+const next = () => {
+    index.value = (index.value + 1) % logos.length
+    resetInterval()
+}
+const prev = () => {
+    index.value = (index.value - 1 + logos.length) % logos.length
+    resetInterval()
+}
 
 // Propiedad computada para manejar de forma segura el logo actual
 const currentLogo = computed(() => logos[index.value] || null)
+
+
+// Función para iniciar el auto-slide
+const startInterval = () => {
+    intervalId = window.setInterval(() => {
+        index.value = (index.value + 1) % logos.length
+    }, 3500) // cada 3.5 segundos
+}
+
+// Reinicia el intervalo al interactuar
+const resetInterval = () => {
+    if (intervalId) clearInterval(intervalId)
+    startInterval()
+}
+
+onMounted(() => {
+    startInterval()
+})
+
+onUnmounted(() => {
+    if (intervalId) clearInterval(intervalId)
+})
+
 
 </script>
 

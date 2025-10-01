@@ -160,19 +160,19 @@
 /* ✅ Ajustes especiales para pantallas grandes (≥1450px) */
 @media (min-width: 1550px) {
     .custom-btn {
-        width: 300px !important;
+        width: 250px !important;
         height: 64px !important;
         padding: 20px 24px !important;
         border-radius: 36px !important;
     }
 
     .btn-text {
-        font-size: 1.25rem !important; /* ~20px */
-        line-height: 1.5rem !important;
+        font-size: 1.00rem !important; /* ~20px */
+        line-height: 1.2rem !important;
     }
 
     .dropdown-content {
-        width: 300px !important;
+        width: 250px !important;
         padding: 16px !important;
     }
 
@@ -185,11 +185,11 @@
 
 
 /* Ajuste para pantallas LG (laptops, 1024px a 1279px) */
-@media (min-width: 1024px) and (max-width: 1279px) {
+@media (min-width: 1024px) and (max-width: 1389px) {
   .custom-btn {
     width: 180px !important;
     height: 44px !important;
-    padding: 12px 16px !important;
+    padding: 12px 10px !important;
     border-radius: 32px !important;
   }
   .btn-text {

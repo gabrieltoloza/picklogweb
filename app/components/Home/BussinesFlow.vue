@@ -32,7 +32,7 @@
                             <BussinesFlowSvg />
                         </div>
                         <div class="mt-6 sm:mt-8 md:mt-10 flex flex-col gap-3 sm:gap-4">
-                            <h2 class="card-title text-xl sm:text-2xl w-full sm:w-36">Crossdock:</h2>
+                            <h2 class="card-title text-xl sm:text-2xl w-full sm:w-36">Crossdock</h2>
                             <p class="w-full sm:w-[90%] text-base sm:text-sm md:text-base">
                                 Retiramos tu mercadería y la integramos a nuestra red logística. Ganás tiempo,
                                 control y un arranque eficiente en cada envío.
