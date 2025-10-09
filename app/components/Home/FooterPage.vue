@@ -99,7 +99,7 @@
                     </a>
 
                     <!-- Whatsapp logo -->
-                    <a href="https://wa.me/541150172832" target="_blank" rel="noopener noreferrer"
+                    <a href="https://wa.me/541123946455" target="_blank" rel="noopener noreferrer"
                         title="Enviar mensaje por WhatsApp" aria-label="WhatsApp">
                         <Whatsapp />
                     </a>
