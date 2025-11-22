@@ -83,12 +83,13 @@
                 <!-- Lado derecho: logo activo -->
                 <div class="order-2 md:order-2 flex flex-col items-center gap-6">
                     <!-- Logo container -->
-                    <div class="relative w-64 sm:w-80 md:w-96 lg:w-[28rem] h-40 sm:h-48 md:h-56 lg:h-64 flex items-center justify-center bg-[#1B2329] rounded-lg">
+                    <div
+                        class="relative w-64 sm:w-80 md:w-96 lg:w-[28rem] h-40 sm:h-48 md:h-56 lg:h-64 flex items-center justify-center bg-[#1B2329] rounded-lg">
                         <div class="glow-effect"></div>
                         <Transition name="fade" mode="out-in">
-                            <img v-if="currentLogo" :key="index" :src="currentLogo.src" :alt="currentLogo.alt"
-                                class="w-[80%] h-[80%] object-contain relative z-10" />
-                            <div v-else class="text-gray-400 relative z-10">No hay logo seleccionado</div>
+                            <component v-if="currentBrand" :key="index" :is="currentBrand.component"
+                                class="w-[80%] h-[80%] relative z-10" />
+                            <div v-else class="text-gray-400 relative z-10">No hay marca seleccionada</div>
                         </Transition>
                     </div>
 
@@ -134,28 +135,42 @@
     </section>
 </template>
 
+
+
 <script setup lang="ts">
+
 import { ref } from 'vue'
+import Buscalibre from '../svg/NewLogos/Buscalibre.vue';
+import Cascanueces from '../svg/NewLogos/Cascanueces.vue';
+import Charquiqui from '../svg/NewLogos/Charquiqui.vue';
+import Ledevit from '../svg/NewLogos/Ledevit.vue';
+import MatePampa from '../svg/NewLogos/MatePampa.vue';
+import Propel from '../svg/NewLogos/Propel.vue';
+import SportClub from '../svg/NewLogos/SportClub.vue';
+import Vacavaliente from '../svg/NewLogos/Vacavaliente.vue';
+import Zulki from '../svg/NewLogos/Zulki.vue';
 
 const props = defineProps<{
     ctaHref?: string
-    logos?: { src: string; alt: string }[]
+    logos?: { component: string; name: string }[]
 }>()
 
 
 const ctaHref = props.ctaHref ?? '/transportistas-formulario'
+
+
 const logos = props.logos ?? [
-    // Ejemplo por defecto (cambiá las rutas por las tuyas)
-    { src: '/marcas/nestle.png', alt: 'Nestle' },
-    { src: '/marcas/vacavaliente.png', alt: 'Vacavaliente' },
-    { src: '/marcas/buscalibre.png', alt: 'Buscalibre' },
-    { src: '/marcas/craftmoments.png', alt: 'Craft Moments' },
-    { src: '/marcas/fenicio.png', alt: 'Fenicio' },
-    { src: '/marcas/tuenti.png', alt: 'Tuenti' },
-    { src: '/marcas/zulki.png', alt: 'Zulki' },
-    { src: '/marcas/boss.png', alt: 'Boss' },
-    { src: '/marcas/sportclub.png', alt: 'Sport Club' },
-    { src: '/marcas/uarstore.png', alt: 'Uar Store' },
+    
+    { component: Buscalibre, name: 'Buscalibre' },
+    { component: Cascanueces, name: 'Cascanueces' },
+    { component: Charquiqui, name: 'Charquiqui' },
+    { component: Ledevit, name: 'Ledevit' },
+    { component: MatePampa, name: 'Mate Pampa' },
+    { component: Propel, name: 'Propel' },
+    { component: SportClub, name: 'Sport Club' },
+    { component: Vacavaliente, name: 'Vacavaliente' },
+    { component: Zulki, name: 'Zulki' },
+
 ]
 
 
@@ -172,7 +187,7 @@ const prev = () => {
 }
 
 // Propiedad computada para manejar de forma segura el logo actual
-const currentLogo = computed(() => logos[index.value] || null)
+const currentBrand = computed(() => logos[index.value] || null)
 
 
 // Función para iniciar el auto-slide
@@ -199,7 +214,9 @@ onUnmounted(() => {
 
 </script>
 
+
 <style scoped>
+
 .fade-enter-active,
 .fade-leave-active {
     transition: opacity 0.5s ease;
@@ -232,6 +249,7 @@ onUnmounted(() => {
         transform: scale(0.95);
         opacity: 0.6;
     }
+
     100% {
         transform: scale(1.1);
         opacity: 0.7;
@@ -242,4 +260,5 @@ onUnmounted(() => {
     position: relative;
     z-index: 5;
 }
+
 </style>

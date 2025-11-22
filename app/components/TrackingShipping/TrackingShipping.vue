@@ -11,39 +11,37 @@
             </div>
         </div>
 
-        <div
-            class="flex flex-col gap-1 bg-transparent items-center px-3 sm:px-20 sm:pt-0 min-h-[1000px] h-auto">
-            <div class="w-full  p-4 rounded-box  mb-4 lg:mb-0 sm:flex sm:flex-col">
+        <div class="flex flex-col gap-1 bg-transparent items-center px-3 sm:px-20 sm:pt-0 min-h-[1000px] h-auto">
+            <!-- Contenedor principal con ancho máximo consistente -->
+            <div
+                class="sm:pl-20 lg:pl-40 w-full max-w-4xl mx-auto p-4 rounded-box mb-4 lg:mb-0 flex flex-col items-center sm:items-start">
 
+                <!-- Texto descriptivo -->
+                <span class="block font-normal text-md text-[#a59f9f] text-center sm:text-left mb-4 w-full">
+                    Ingrese el código de seguimiento
+                </span>
 
-                <span
-                    class="font-normal text-md text-[#a59f9f] text-center pl-7 sm:pl-0 md:pr-14 md:mr-5 lg:pr-28 lg:mr-10 xl:pr-50 xl:mr-8">Ingrese
-                    el código de seguimiento</span>
+                <!-- Fieldset con formulario -->
+                <fieldset class="flex flex-col sm:flex-row justify-center sm:justify-start items-center gap-4 w-full">
 
-                <fieldset
-                    class="flex flex-col sm:flex-row justify-center items-center bg-transparent sm:gap-5 rounded-lg w-full p-4 sm:pt-0">
+<!-- Input estilizado -->
+<div
+    class="w-full sm:w-auto sm:flex-1 sm:max-w-md flex items-center bg-[#FFFFFF] rounded-lg gap-1 px-2 py-3 shadow-sm border border-transparent hover:border-gray-300 focus-within:border-[#F9BD6B] focus-within:ring-2 focus-within:ring-[#F9BD6B] focus-within:ring-opacity-20 transition-all duration-200">
+    <!-- SVG Icon -->
+    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+        class="flex-shrink-0">
+        <!-- ...existing code... -->
+    </svg>
 
-                    <!-- Input estilizado como la imagen -->
-                    <div
-                        class="lg:w-[30%] sm:h-[50%] md:w-[50%] lg: flex justify-center items-center bg-[#FFFFFF] rounded-lg gap-3 px-4 py-3 shadow-sm hover:border-gray-300 focus-within:border-[#F9BD6B] focus-within:ring-2 focus-within:ring-[#F9BD6B] focus-within:ring-opacity-20 transition-all duration-200 mb-4 sm:mb-0">
-                        <!-- SVG Icon (puedes cambiarlo por el que prefieras) -->
-                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M9.77734 0C9.89118 0 10.0005 0.0216428 10.1006 0.0615234L10.1182 0.0693359C10.1543 0.0846932 10.1887 0.103893 10.2227 0.124023C10.2347 0.131195 10.2471 0.137781 10.2588 0.145508C10.2943 0.16892 10.3282 0.195041 10.3604 0.223633C10.3671 0.229608 10.3733 0.236012 10.3799 0.242188C10.3886 0.250394 10.3979 0.258015 10.4062 0.266602L15.7393 5.7207C15.7621 5.74409 15.7827 5.76938 15.8027 5.79492C15.8098 5.80388 15.8165 5.81303 15.8232 5.82227C15.8485 5.85696 15.8716 5.8929 15.8916 5.93066C15.8969 5.94056 15.9013 5.95082 15.9062 5.96094C15.9246 5.99886 15.9401 6.03796 15.9531 6.07812C15.9718 6.13582 15.9871 6.19564 15.9941 6.25781V6.27148C15.9972 6.30189 16 6.33244 16 6.36328V17.2725C16 18.7787 14.8058 20 13.333 20H2.66699C1.19423 20 0 18.7787 0 17.2725V2.72754C0 1.22131 1.19423 0 2.66699 0H9.77734ZM2.66699 1.81836C2.17607 1.81836 1.77734 2.22546 1.77734 2.72754V17.2725C1.77734 17.7745 2.17607 18.1816 2.66699 18.1816H13.333C13.8239 18.1816 14.2227 17.7745 14.2227 17.2725V7.27246H9.77734C9.3217 7.27224 8.94588 6.92169 8.89453 6.46973L8.88867 6.36328V1.81836H2.66699ZM11.5557 13.6367C12.0465 13.6368 12.4443 14.0439 12.4443 14.5459C12.4441 15.0119 12.1011 15.3957 11.6592 15.4482L11.5557 15.4541H4.44434C3.95361 15.454 3.5559 15.0477 3.55566 14.5459C3.55566 14.0797 3.89874 13.6951 4.34082 13.6426L4.44434 13.6367H11.5557ZM11.5557 10C12.0465 10.0001 12.4443 10.4071 12.4443 10.9092C12.4443 11.3754 12.1012 11.76 11.6592 11.8125L11.5557 11.8184H4.44434C3.9535 11.8183 3.55571 11.4112 3.55566 10.9092C3.55566 10.443 3.89874 10.0584 4.34082 10.0059L4.44434 10H11.5557ZM6.22266 6.36328C6.71329 6.36352 7.11119 6.77065 7.11133 7.27246C7.11133 7.73858 6.76812 8.12314 6.32617 8.17578L6.22266 8.18164H4.44434C3.95347 8.18158 3.55566 7.7745 3.55566 7.27246C3.55579 6.80637 3.89883 6.42262 4.34082 6.37012L4.44434 6.36328H6.22266ZM10.667 5.4541H12.9639L10.667 3.10449V5.4541Z"
-                                fill="#D8D8D8" />
-                            <path
-                                d="M9.77734 0C9.89118 0 10.0005 0.0216428 10.1006 0.0615234L10.1182 0.0693359C10.1543 0.0846932 10.1887 0.103893 10.2227 0.124023C10.2347 0.131195 10.2471 0.137781 10.2588 0.145508C10.2943 0.16892 10.3282 0.195041 10.3604 0.223633C10.3671 0.229608 10.3733 0.236012 10.3799 0.242188C10.3886 0.250394 10.3979 0.258015 10.4062 0.266602L15.7393 5.7207C15.7621 5.74409 15.7827 5.76938 15.8027 5.79492C15.8098 5.80388 15.8165 5.81303 15.8232 5.82227C15.8485 5.85696 15.8716 5.8929 15.8916 5.93066C15.8969 5.94056 15.9013 5.95082 15.9062 5.96094C15.9246 5.99886 15.9401 6.03796 15.9531 6.07812C15.9718 6.13582 15.9871 6.19564 15.9941 6.25781V6.27148C15.9972 6.30189 16 6.33244 16 6.36328V17.2725C16 18.7787 14.8058 20 13.333 20H2.66699C1.19423 20 0 18.7787 0 17.2725V2.72754C0 1.22131 1.19423 0 2.66699 0H9.77734ZM2.66699 1.81836C2.17607 1.81836 1.77734 2.22546 1.77734 2.72754V17.2725C1.77734 17.7745 2.17607 18.1816 2.66699 18.1816H13.333C13.8239 18.1816 14.2227 17.7745 14.2227 17.2725V7.27246H9.77734C9.3217 7.27224 8.94588 6.92169 8.89453 6.46973L8.88867 6.36328V1.81836H2.66699ZM11.5557 13.6367C12.0465 13.6368 12.4443 14.0439 12.4443 14.5459C12.4441 15.0119 12.1011 15.3957 11.6592 15.4482L11.5557 15.4541H4.44434C3.95361 15.454 3.5559 15.0477 3.55566 14.5459C3.55566 14.0797 3.89874 13.6951 4.34082 13.6426L4.44434 13.6367H11.5557ZM11.5557 10C12.0465 10.0001 12.4443 10.4071 12.4443 10.9092C12.4443 11.3754 12.1012 11.76 11.6592 11.8125L11.5557 11.8184H4.44434C3.9535 11.8183 3.55571 11.4112 3.55566 10.9092C3.55566 10.443 3.89874 10.0584 4.34082 10.0059L4.44434 10H11.5557ZM6.22266 6.36328C6.71329 6.36352 7.11119 6.77065 7.11133 7.27246C7.11133 7.73858 6.76812 8.12314 6.32617 8.17578L6.22266 8.18164H4.44434C3.95347 8.18158 3.55566 7.7745 3.55566 7.27246C3.55579 6.80637 3.89883 6.42262 4.34082 6.37012L4.44434 6.36328H6.22266ZM10.667 5.4541H12.9639L10.667 3.10449V5.4541Z"
-                                fill="#C9C9CD" />
-                        </svg>
+    <!-- Input Field -->
+    <input v-model="inputShippingCode" type="text" placeholder="Ejemplo: 0000045487"
+        class="flex-1 outline-none text-gray-700 placeholder-gray-400 bg-transparent font-medium" />
+</div>
 
-                        <!-- Input Field -->
-                        <input v-model="inputShippingCode" type="text" placeholder="Ejemplo: 0000045487"
-                            class="flex-1 outline-none text-gray-700 placeholder-gray-400 bg-transparent font-medium" />
-                    </div>
-
-
-                    <div class="inconbox-mobile-custom flex justify-center pt-10 sm:pt-0 sm:pl-5">
-                        <button class="pointer" @click="handlerRequestShippingState">
+                    <!-- Botón de búsqueda -->
+                    <div class="flex justify-center">
+                        <button class="pointer transition-transform hover:scale-105"
+                            @click="handlerRequestShippingState">
                             <IconBox :height="75" :width="75" />
                         </button>
                     </div>
@@ -51,15 +49,19 @@
                 </fieldset>
             </div>
 
-            <div class="w-full lg:w-1/2" v-if="shippingStatesResult === undefined && resultMessage !== ''">
-                <NotFoundResult :message="resultMessage" />
-            </div>
+            <!-- Contenido dinámico con mismo ancho máximo -->
+            <div class="w-full max-w-4xl mx-auto px-4">
+                <div v-if="shippingStatesResult === undefined && resultMessage !== ''" class="w-full">
+                    <NotFoundResult :message="resultMessage" />
+                </div>
 
-            <div v-else-if="shippingStatesResult !== undefined" class="w-full lg:w-2/3 pb-16">
-                <DetailTrackingShipping :shipping-history="shippingStatesResult.result" :shipping-code="setShippingCode"
-                    :info-shipping-state="shippingInfoState?.result || []" />
+                <div v-else-if="shippingStatesResult !== undefined" class="w-full pb-16">
+                    <DetailTrackingShipping :shipping-history="shippingStatesResult.result"
+                        :shipping-code="setShippingCode" :info-shipping-state="shippingInfoState?.result || []" />
+                </div>
             </div>
         </div>
+
     </div>
 
     <!-- Loading session -->

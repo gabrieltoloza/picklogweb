@@ -4,7 +4,7 @@
 
         <!-- Container principal - vertical en mobile, horizontal en desktop -->
         <div
-            class="flex flex-col md:flex-row md:justify-between md:items-start gap-12 sm:gap-8 md:gap-4 h-full py-5 sm:py-20 md:py-20 lg:py-20 xl:py-20 lg:px-20">
+            class="flex flex-col md:flex-row md:justify-around md:items-start gap-12 sm:gap-8 md:gap-4 h-full py-5 sm:py-20 md:py-20 lg:py-20 xl:py-20 lg:px-20">
 
 
             <!-- Sección Horario -->
@@ -73,24 +73,9 @@
                         <span class="text-sm md:text-base">+54 9 11 2394-6455</span>
                     </div>
                 </div>
-            </nav>
-
-
-            <!-- Sección Newsletter -->
-            <form class="flex flex-col items-center md:items-start w-full md:w-auto">
-                <h6 class="font-medium text-xl mb-4">Newsletter</h6>
-
-                <fieldset class="w-full max-w-[400px] mb-6">
-                    <div class="flex w-full">
-                        <input type="text" placeholder="Subscribite a nuestro Mailing"
-                            class="flex-grow p-3 pl-6 text-xs bg-[#3f4143] rounded-l-full border border-[#3f4143] border-r-0 placeholder-gray-200 focus:placeholder-transparent" />
-                        <button
-                            class="px-4 py-3 bg-[#F9BD6B] rounded-r-xl border border-[#3f4143] border-l-0 text-gray-700 font-medium whitespace-nowrap">Subscribite</button>
-                    </div>
-                </fieldset>
 
                 <!-- Redes Sociales -->
-                <div class="flex gap-4 justify-center md:justify-start">
+                <div class="flex gap-4 justify-center md:justify-start py-5 pt-15 sm:pt-10">
 
                     <!-- Instagram logo -->
                     <a href="https://www.instagram.com/picklogg/" target="_blank" rel="noopener noreferrer"
@@ -105,17 +90,24 @@
                     </a>
 
                 </div>
-            </form>
+            </nav>
+
+
+
+
         </div>
     </footer>
 
 
     <footer class="bg-custom w-full h-[185px] mx-auto border-t-2 bg-[#0f0f0f] text-white flex justify-center pt-5">
-        <p class="text-sm">Ⓒ 2023 All rights reserved. </p>
+        <p class="text-sm">Ⓒ {{ new Date().getUTCFullYear() }} Pick & Log - Derechos reservados. </p>
     </footer>
 </template>
 
+
+
 <script setup lang="ts">
+
 import Contact from '../svg/Contact.vue';
 import Instagram from '../svg/Instagram.vue';
 import Whatsapp from '../svg/Whatsapp.vue';

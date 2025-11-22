@@ -1,19 +1,22 @@
 <template>
-    <div class="hero min-h-screen bg-transparent p-10 transition-container z-10">
+    <div class="hero min-h-screen bg-transparent pt-10 sm:p-10 transition-container z-10">
         <div class="hero-content text-center pb-20">
-            <div class="top-mobile-custom bottom-mobile-custom pt-20 sm:pt-0 pb-24 sm:pb-36 max-w-md h-full flex flex-col justify-between min-h-[70vh]">
+            <div
+                class="top-mobile-custom bottom-mobile-custom pt-10 sm:pt-0 pb-15 sm:pb-36 max-w-md h-full flex flex-col justify-between min-h-[70vh]">
 
                 <div>
-                    <h1 class="text-4xl sm:w-full sm:text-5xl font-bold">
+                    <h1 class="main-title text-4xl sm:w-full sm:text-5xl font-bold pt-10">
                         <span class="text-white">No hay dos empresas <span class="text-[#F9BD6B]">iguales</span></span>
                     </h1>
                 </div>
 
-                <div class="oklogo-and-paragraph mb-10 sm:mt-0 sm:pt-24 text-white flex flex-col sm:flex-row gap-5 sm:gap-0 h-50 w-full">
+                <div
+                    class="oklogo-and-paragraph mb-10 sm:mt-0 sm:pt-24 sm:px-14 text-white flex flex-col sm:flex-row gap-5 sm:gap-0 h-50 w-full">
                     <span class="flex justify-center">
                         <OkLogo />
                     </span>
-                    <span class="text-balance text-lg sm:text-xl sm:w-full">Por eso conectamos inteligencia
+                    <span class="main-text text-balance text-lg sm:text-xl sm:w-full px-10 sm:px-0">Por eso conectamos
+                        inteligencia
                         operativa
                         con atención personalizada.</span>
                 </div>
@@ -48,9 +51,10 @@
         </div>
     </div>
 
-    <div class="inconbox-mobile-custom sm:hidden fixed bottom-24 left-1/2 -translate-x-1/2 flex justify-center items-center z-40 w-auto">
+    <div
+        class="inconbox-mobile-custom sm:hidden fixed bottom-24 left-1/2 -translate-x-1/2 flex justify-center items-center z-40 w-auto">
         <NuxtLink to="/tracking">
-            <IconBox :height="55" :width="55"/>
+            <IconBox :height="55" :width="55" />
         </NuxtLink>
     </div>
 </template>
@@ -95,7 +99,7 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
 }
 
 @media (max-width: 360px) {
-  
+
     .top-mobile-custom {
         padding-top: 10px;
     }
@@ -103,7 +107,7 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
     .bottom-mobile-custom {
         padding-bottom: 176px;
     }
-    
+
     .inconbox-mobile-custom {
         bottom: 55px;
     }
@@ -115,4 +119,24 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
 
 }
 
+
+@media (max-height: 700px) {
+
+    .top-mobile-custom {
+        padding-top: 0;
+    }
+
+    .main-title {
+        padding-top: 0;
+    }
+
+    .main-text {
+        font-size: medium;
+    }
+
+    .oklogo-and-paragraph {
+        padding-bottom: 0;
+    }
+
+}
 </style>
