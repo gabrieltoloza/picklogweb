@@ -24,19 +24,19 @@
                 <!-- Fieldset con formulario -->
                 <fieldset class="flex flex-col sm:flex-row justify-center sm:justify-start items-center gap-4 w-full">
 
-<!-- Input estilizado -->
-<div
-    class="w-full sm:w-auto sm:flex-1 sm:max-w-md flex items-center bg-[#FFFFFF] rounded-lg gap-1 px-2 py-3 shadow-sm border border-transparent hover:border-gray-300 focus-within:border-[#F9BD6B] focus-within:ring-2 focus-within:ring-[#F9BD6B] focus-within:ring-opacity-20 transition-all duration-200">
-    <!-- SVG Icon -->
-    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"
-        class="flex-shrink-0">
-        <!-- ...existing code... -->
-    </svg>
+                    <!-- Input estilizado -->
+                    <div
+                        class="w-full sm:w-auto sm:flex-1 sm:max-w-md flex items-center bg-[#FFFFFF] rounded-lg gap-1 px-2 py-3 shadow-sm border border-transparent hover:border-gray-300 focus-within:border-[#F9BD6B] focus-within:ring-2 focus-within:ring-[#F9BD6B] focus-within:ring-opacity-20 transition-all duration-200">
+                        <!-- SVG Icon -->
+                        <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg"
+                            class="flex-shrink-0">
+                            <!-- ...existing code... -->
+                        </svg>
 
-    <!-- Input Field -->
-    <input v-model="inputShippingCode" type="text" placeholder="Ejemplo: 0000045487"
-        class="flex-1 outline-none text-gray-700 placeholder-gray-400 bg-transparent font-medium" />
-</div>
+                        <!-- Input Field -->
+                        <input v-model="inputShippingCode" type="text" placeholder="Ejemplo: 0000045487"
+                            class="flex-1 outline-none text-gray-700 placeholder-gray-400 bg-transparent font-medium" />
+                    </div>
 
                     <!-- Botón de búsqueda -->
                     <div class="flex justify-center">

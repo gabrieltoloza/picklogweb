@@ -10,16 +10,17 @@
                     </h1>
                 </div>
 
+                
                 <div
                     class="oklogo-and-paragraph mb-10 sm:mt-0 sm:pt-24 sm:px-14 text-white flex flex-col sm:flex-row gap-5 sm:gap-0 h-50 w-full">
-                    <span class="flex justify-center">
+                    <span class="flex justify-center shrink-0">
                         <OkLogo />
                     </span>
-                    <span class="main-text text-balance text-lg sm:text-xl sm:w-full px-10 sm:px-0">Por eso conectamos
-                        inteligencia
-                        operativa
-                        con atención personalizada.</span>
+                    <span class="main-text px-10 sm:px-0">
+                        Por eso conectamos inteligencia operativa con atención personalizada.
+                    </span>
                 </div>
+
 
                 <div class="hidden sm:block">
 
@@ -72,6 +73,8 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
 </script>
 
 <style scoped>
+
+
 .transition-container {
     position: relative;
     background: transparent;
@@ -81,25 +84,38 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
     content: "";
     position: absolute;
     bottom: -1px;
-    /* Se extiende 1px fuera del componente */
     left: 0;
     width: 100%;
     height: 200px;
-    /* Aumentar altura */
     background: linear-gradient(to bottom,
             transparent,
             rgba(0, 0, 0, 0.3) 30%,
             rgba(0, 0, 0, 0.5) 60%,
             rgba(0, 0, 0, 0.9) 90%,
             rgba(0, 0, 0, 1)
-            /* Negro completo al final */
         );
     pointer-events: none;
     z-index: 9;
 }
 
-@media (max-width: 360px) {
 
+/* SOLUCIÓN PARA EL TEXTO COMPACTO EN PRODUCCIÓN */
+.main-text {
+    font-size: 1.125rem;
+    line-height: 1.4; /* Más compacto */
+    letter-spacing: normal; /* Sin espaciado extra */
+    word-spacing: normal; /* Sin espaciado extra */
+}
+
+@media (min-width: 640px) {
+    .main-text {
+        font-size: 1.25rem;
+        line-height: 1.5;
+        width: 100%;
+    }
+}
+
+@media (max-width: 360px) {
     .top-mobile-custom {
         padding-top: 10px;
     }
@@ -116,12 +132,9 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
         gap: 35px;
         padding-top: 20px;
     }
-
 }
 
-
 @media (max-height: 700px) {
-
     .top-mobile-custom {
         padding-top: 0;
     }
@@ -131,12 +144,13 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
     }
 
     .main-text {
-        font-size: medium;
+        font-size: 1rem; /* 16px en pantallas más pequeñas */
+        line-height: 1.6;
     }
 
     .oklogo-and-paragraph {
         padding-bottom: 0;
     }
-
 }
+
 </style>
