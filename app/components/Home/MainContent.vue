@@ -16,7 +16,7 @@
                     <span class="flex justify-center shrink-0">
                         <OkLogo />
                     </span>
-                    <span class="main-text px-10 sm:px-0">
+                    <span class="main-text px-10 sm:px-0 text-[1.125rem] leading-[1.4] tracking-normal sm:text-[1.25rem] sm:leading-[1.5]">
                         Por eso conectamos inteligencia operativa con atención personalizada.
                     </span>
                 </div>
@@ -61,19 +61,18 @@
 </template>
 
 <script setup lang="ts">
+
 import IconBox from '../svg/Mobile/IconBox.vue';
 import OkLogo from '../svg/OkLogo.vue';
 import RightRow from '../svg/RightRow.vue';
 import RightRowComplement from '../svg/RightRowComplement.vue';
 
 
-
-
-
 </script>
 
-<style scoped>
 
+
+<style scoped>
 
 .transition-container {
     position: relative;
@@ -96,23 +95,6 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
         );
     pointer-events: none;
     z-index: 9;
-}
-
-
-/* SOLUCIÓN PARA EL TEXTO COMPACTO EN PRODUCCIÓN */
-.main-text {
-    font-size: 1.125rem;
-    line-height: 1.4; /* Más compacto */
-    letter-spacing: normal; /* Sin espaciado extra */
-    word-spacing: normal; /* Sin espaciado extra */
-}
-
-@media (min-width: 640px) {
-    .main-text {
-        font-size: 1.25rem;
-        line-height: 1.5;
-        width: 100%;
-    }
 }
 
 @media (max-width: 360px) {
@@ -144,8 +126,8 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
     }
 
     .main-text {
-        font-size: 1rem; /* 16px en pantallas más pequeñas */
-        line-height: 1.6;
+        font-size: 1rem !important;
+        line-height: 1.6 !important;
     }
 
     .oklogo-and-paragraph {
