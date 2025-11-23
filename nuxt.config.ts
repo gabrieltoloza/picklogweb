@@ -2,9 +2,6 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
     vite: {
         plugins: [tailwindcss()],
-        build: {
-            cssCodeSplit: false, // Fuerza CSS en un solo archivo para consistencia
-        }
     },
     css: ["~/assets/css/main.css"],
     nitro: {

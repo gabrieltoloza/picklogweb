@@ -10,15 +10,15 @@
                     </h1>
                 </div>
 
-                
+
                 <div
-                    class="oklogo-and-paragraph mb-10 sm:mt-0 sm:pt-24 sm:px-14 text-white flex flex-col sm:flex-row gap-5 sm:gap-0 h-50 w-full">
+                    class="oklogo-and-paragraph mb-10 sm:mt-0 sm:pt-24 sm:px-10 text-white flex flex-col sm:flex-row gap-5 sm:gap-0 h-50 w-full">
                     <span class="flex justify-center shrink-0">
                         <OkLogo />
                     </span>
-                    <span class="main-text px-10 sm:px-0">
-                        Por eso conectamos inteligencia operativa con atención personalizada.
-                    </span>
+                    <span class="text-lg">Por eso conectamos inteligencia
+                        operativa con atención
+                        personalizada.</span>
                 </div>
 
 
@@ -73,8 +73,6 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
 </script>
 
 <style scoped>
-
-
 .transition-container {
     position: relative;
     background: transparent;
@@ -92,28 +90,13 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
             rgba(0, 0, 0, 0.3) 30%,
             rgba(0, 0, 0, 0.5) 60%,
             rgba(0, 0, 0, 0.9) 90%,
-            rgba(0, 0, 0, 1)
-        );
+            rgba(0, 0, 0, 1));
     pointer-events: none;
     z-index: 9;
 }
 
 
-/* SOLUCIÓN PARA EL TEXTO COMPACTO EN PRODUCCIÓN */
-.main-text {
-    font-size: 1.125rem;
-    line-height: 1.4; /* Más compacto */
-    letter-spacing: normal; /* Sin espaciado extra */
-    word-spacing: normal; /* Sin espaciado extra */
-}
 
-@media (min-width: 640px) {
-    .main-text {
-        font-size: 1.25rem;
-        line-height: 1.5;
-        width: 100%;
-    }
-}
 
 @media (max-width: 360px) {
     .top-mobile-custom {
@@ -144,7 +127,8 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
     }
 
     .main-text {
-        font-size: 1rem; /* 16px en pantallas más pequeñas */
+        font-size: 1rem;
+        /* 16px en pantallas más pequeñas */
         line-height: 1.6;
     }
 
@@ -152,5 +136,4 @@ import RightRowComplement from '../svg/RightRowComplement.vue';
         padding-bottom: 0;
     }
 }
-
 </style>
