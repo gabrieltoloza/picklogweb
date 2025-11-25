@@ -3,7 +3,7 @@
         <div class="container mx-auto px-8 sm:px-4 flex flex-col sm:flex-row">
 
             <!-- Primer div -->
-            <div class="max-w-4xl w-full sm:w-1/2 flex flex-col items-start gap-10 sm:pl-10 lg:pl-25">
+            <div class="max-w-4xl w-full sm:w-1/2 flex flex-col items-start gap-10 sm:pl-10 lg:pl-20">
                 <div class="pr-0 sm:pr-32">
                     <Dactilar />
                 </div>
@@ -19,7 +19,7 @@
             </div>
 
             <!-- Segundo div -->
-            <div class="flex flex-col gap-5 w-full sm:w-1/2 items-center justify-center pt-12 sm:pt-32">
+            <div class="flex flex-col gap-5 w-full sm:w-1/2 items-center justify-center pt-12 sm:pt-32 sm:pl-10">
                 <div class="estadistica-box flex gap-10 p-4 px-10 border border-white rounded-2xl bg-[#1B2329]">
                     <h3 class="text-3xl text-[#F9BD6B] font-semibold">+<span id="clientes">0</span></h3>
                     <p>Clientes</p>

@@ -58,6 +58,7 @@
             <IconBox :height="55" :width="55" />
         </NuxtLink>
     </div>
+    
 </template>
 
 <script setup lang="ts">

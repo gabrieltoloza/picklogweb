@@ -1,5 +1,5 @@
 <template>
-    <div class="father-solutions min-h-[600px] sm:min-h-[700px] md:min-h-[1000px] lg:min-h-[900px]">
+    <div class="father-solutions min-h-[600px] sm:min-h-[1000px] md:min-h-[1200px] lg:min-h-[1200px] xl:min-h-[2000px]">
         <div class="content-container">
             <MainSolutions />
             <DropdownSolutions />
@@ -55,36 +55,66 @@ useHead({
 
 
 <style scoped>
+
 .father-solutions {
     background-image: url(/Soluciones-bg.png);
     background-size: cover;
-    background-position: top -200px left;
-    /* Cambiado de 'top left' a 'top right' */
+    background-position: top left;
     background-repeat: no-repeat;
-    min-height: 100%;
+    background-attachment: local;
+    min-height: 100vh;
     height: auto;
     width: 100%;
     position: relative;
     z-index: 2;
+    padding-bottom: 200px;
 }
-
 
 .content-container {
     position: relative;
     z-index: 3;
     width: 100%;
-    height: 100%;
+    height: inherit;
+    padding-bottom: 150px;
 }
 
 @media (max-width: 639px) {
     .father-solutions {
         background-image: url('/bg_solutions_mobile.png');
         background-position: top left;
-        min-height: 1200px;
+        background-attachment: fixed; /* Cambiado de local a fixed */
+        background-size: cover;
+        min-height: 100vh;
+        padding-bottom: 300px;
+    }
+    
+    .content-container {
+        padding-bottom: 150px;
     }
 
     .no-padding-mobile {
         padding-top: 0 !important;
     }
 }
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (min-width: 640px) and (max-width: 767px) {
+    .father-solutions {
+        background-attachment: fixed; /* Agregado para tablets pequeñas */
+        padding-bottom: 250px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .father-solutions {
+        padding-bottom: 220px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .father-solutions {
+        padding-bottom: 200px;
+    }
+}
+
 </style>
