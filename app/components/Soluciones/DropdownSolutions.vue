@@ -5,17 +5,17 @@
             <!-- Botones generados dinámicamente -->
             <div v-for="(button, index) in buttons" :key="index" class="dropdown dropdown-hover">
                 <div tabindex="0" role="button"
-                    class="custom-btn w-[200px] sm:w-[180px] h-[50px] sm:h-[42px] rounded-[36px] py-3 px-6 sm:px-3 flex items-center justify-between 
+                    class="custom-btn w-[220px] sm:w-[200px] h-[55px] sm:h-[45px] rounded-[36px] py-3 px-6 sm:px-4 flex items-center justify-between 
                     bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] focus:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
-                    <span class="btn-text font-medium text-sm sm:text-sm">{{ button.title }}</span>
+                    <span class="btn-text font-medium text-sm sm:text-base">{{ button.title }}</span>
                     <svg :width="button.iconSize" :height="button.iconSize" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 8H16" stroke="#121A1F" stroke-width="2" />
                         <path d="M8 16L8 0" stroke="#121A1F" stroke-width="2" />
                     </svg>
                 </div>
                 <ul tabindex="0" class="dropdown-button dropdown-content menu absolute left-0 top-full bg-transparent rounded-[14px] z-10 
-                    w-[200px] sm:w-[180px] p-2 mt-3 shadow-lg border border-gray-400">
-                    <p class="dropdown-text text-white text-xs sm:text-sm p-3 sm:p-4" v-html="button.description"></p>
+                    w-[220px] sm:w-[200px] p-2 mt-3 shadow-lg border border-gray-400">
+                    <p class="dropdown-text text-white text-sm sm:text-base p-3 sm:p-4" v-html="button.description"></p>
                 </ul>
             </div>
 
@@ -95,24 +95,24 @@ const buttons = [
 /* ✅ Ajustes especiales para pantallas grandes (≥1550px) */
 @media (min-width: 1550px) {
     .custom-btn {
-        width: 220px !important;
-        height: 56px !important;
+        width: 240px !important;
+        height: 58px !important;
         padding: 16px 20px !important;
         border-radius: 36px !important;
     }
 
     .btn-text {
-        font-size: 0.875rem !important; /* Reducido de 1.00rem */
-        line-height: 1.1rem !important;
+        font-size: 1rem !important;
+        line-height: 1.2rem !important;
     }
 
     .dropdown-content {
-        width: 220px !important;
+        width: 240px !important;
         padding: 12px !important;
     }
 
     .dropdown-text {
-        font-size: 0.875rem !important; /* Reducido de 1.125rem */
+        font-size: 1rem !important;
         padding: 18px !important;
     }
 
@@ -124,26 +124,26 @@ const buttons = [
 /* Ajuste para pantallas LG (laptops, 1024px a 1389px) */
 @media (min-width: 1024px) and (max-width: 1389px) {
     .custom-btn {
-        width: 170px !important; /* Reducido de 200px */
-        height: 48px !important;
-        padding: 10px 8px !important;
+        width: 190px !important;
+        height: 50px !important;
+        padding: 12px 10px !important;
         border-radius: 32px !important;
     }
 
     .btn-text {
-        font-size: 0.75rem !important; /* Reducido de 0.85rem */
+        font-size: 0.875rem !important;
         line-height: 1.1rem !important;
         padding: 4px;
     }
 
     .dropdown-content {
-        width: 160px !important; /* Reducido de 180px */
+        width: 190px !important;
         padding: 8px !important;
     }
 
     .dropdown-text {
-        font-size: 0.8rem !important; /* Reducido de 0.95rem */
-        padding: 12px !important;
+        font-size: 0.875rem !important;
+        padding: 14px !important;
     }
 }
 
