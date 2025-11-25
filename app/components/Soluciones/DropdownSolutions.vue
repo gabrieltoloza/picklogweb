@@ -7,7 +7,7 @@
                 <div tabindex="0" role="button"
                     class="custom-btn w-[220px] sm:w-[200px] h-[55px] sm:h-[45px] rounded-[36px] py-3 px-6 sm:px-4 flex items-center justify-between 
                     bg-gray-200 text-gray-800 hover:bg-[#F9BD6B] focus:bg-[#F9BD6B] hover:text-gray-800 transition-all duration-300">
-                    <span class="btn-text font-medium text-sm sm:text-base">{{ button.title }}</span>
+                    <span class="btn-text font-medium text-xs sm:text-sm">{{ button.title }}</span>
                     <svg :width="button.iconSize" :height="button.iconSize" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 8H16" stroke="#121A1F" stroke-width="2" />
                         <path d="M8 16L8 0" stroke="#121A1F" stroke-width="2" />
@@ -102,8 +102,8 @@ const buttons = [
     }
 
     .btn-text {
-        font-size: 1rem !important;
-        line-height: 1.2rem !important;
+        font-size: 0.875rem !important; /* Reducido de 1rem */
+        line-height: 1.1rem !important;
     }
 
     .dropdown-content {
@@ -131,8 +131,8 @@ const buttons = [
     }
 
     .btn-text {
-        font-size: 0.875rem !important;
-        line-height: 1.1rem !important;
+        font-size: 0.75rem !important; /* Reducido de 0.875rem */
+        line-height: 1rem !important;
         padding: 4px;
     }
 
