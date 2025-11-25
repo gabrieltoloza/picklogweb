@@ -46,7 +46,7 @@ import Dactilar from '../svg/Dactilar.vue';
 
 
 onMounted(() => {
-    const countUpClientes = new CountUp('clientes', 2000, { duration: 2 } )
+    const countUpClientes = new CountUp('clientes', 50, { duration: 2 } )
     const countUpCamionetas = new CountUp('camionetas', 20, { duration: 5 })
     const countUpEmpleados = new CountUp('empleados', 70, { duration: 4 })
 
