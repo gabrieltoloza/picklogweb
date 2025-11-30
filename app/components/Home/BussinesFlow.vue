@@ -29,7 +29,7 @@
                     <div
                         class="card-body flex flex-col flex-grow py-4 sm:py-5 md:py-6 my-4 sm:my-5 md:my-6 mx-3 sm:mx-4 items-start">
                         <div class="self-start">
-                            <BussinesFlowSvg />
+                            <CrossdockSvg />
                         </div>
                         <div class="mt-6 sm:mt-8 md:mt-10 flex flex-col gap-3 sm:gap-4">
                             <h2 class="card-title text-xl sm:text-2xl w-full sm:w-36">Crossdock</h2>
@@ -49,7 +49,7 @@
                     <div
                         class="card-body flex flex-col flex-grow py-4 sm:py-5 md:py-6 my-4 sm:my-5 md:my-6 mx-3 sm:mx-4 items-start">
                         <div class="self-start">
-                            <BussinesFlowSvg />
+                            <MeliIcon />
                         </div>
                         <div class="mt-6 sm:mt-8 md:mt-10 flex flex-col gap-3 sm:gap-4">
                             <h2 class="card-title text-xl sm:text-2xl w-full">Mercado Envíos</h2>
@@ -68,7 +68,7 @@
                     <div
                         class="card-body flex flex-col flex-grow py-4 sm:py-5 md:py-6 my-4 sm:my-5 md:my-6 mx-3 sm:mx-4 items-start">
                         <div class="self-start">
-                            <BussinesFlowSvg />
+                            <MeliFlex />
                         </div>
                         <div class="mt-6 sm:mt-8 md:mt-10 flex flex-col gap-3 sm:gap-4">
                             <h2 class="card-title text-xl sm:text-2xl w-full">Mercado Flex</h2>
@@ -170,6 +170,9 @@
 
 <script setup lang="ts">
 import BussinesFlowSvg from '../svg/BussinesFlowSvg.vue';
+import CrossdockSvg from '../svg/BussinessFlowSection/CrossdockSvg.vue';
+import MeliFlex from '../svg/BussinessFlowSection/MeliFlex.vue';
+import MeliIcon from '../svg/BussinessFlowSection/MeliIcon.vue';
 import IlustrationBussines from '../svg/IlustrationBussines.vue';
 
 
